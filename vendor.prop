@@ -365,6 +365,10 @@ ro.vendor.mtk_thermal_2_0=1
 # USB
 vendor.usb.controller=11201000.usb0
 
+# Watchdog
+framework_watchdog.fatal_window.second=600
+framework_watchdog.fatal_count=3
+
 # Wifi
 ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
