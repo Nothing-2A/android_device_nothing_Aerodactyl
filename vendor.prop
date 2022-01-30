@@ -163,6 +163,10 @@ ro.vendor.arm.egl.configs.r16_g16_b16_a16_64bit_float.recordable=false
 # Incremental FS
 ro.incremental.enable=yes
 
+# HWUI
+debug.hwui.target_cpu_time_percent=30
+debug.hwui.use_hint_manager=true
+
 # Keystore
 ro.hardware.kmsetkey=trustonic
 
