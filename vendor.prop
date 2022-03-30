@@ -176,6 +176,7 @@ ro.odm.build.media_performance_class=0
 ro.vendor.mtk_config_max_dram_size=
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk.c2.vdec.fmt.support.level=3
+vendor.media.omx=0
 vendor.mtk.vdec.decode.error.handle.mode=3
 vendor.mtk.vdec.waitkeyframeforplay=9
 
