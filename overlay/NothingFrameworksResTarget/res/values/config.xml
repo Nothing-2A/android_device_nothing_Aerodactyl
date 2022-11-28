@@ -291,7 +291,7 @@
     <bool name="config_dozePulsePickup">true</bool>
 
     <!-- Type of the tap sensor. Empty if tap is not supported. -->
-    <string name="config_dozeTapSensorType" translatable="false">com.google.sensor.single_touch</string>
+    <string name="config_dozeTapSensorType" translatable="false">org.lineageos.sensor.single_touch</string>
 
     <!-- Control whether the always on display mode is enabled by default. This value will be used
          during initialization when the setting is still null. -->
