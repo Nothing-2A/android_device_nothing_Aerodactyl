@@ -8,5 +8,8 @@ ro.com.google.lens.oem_camera_package=com.nothing.camera
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
+# RKP
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
 # Voice assitant
 ro.opa.eligible_device=true
