@@ -72,8 +72,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libalsautils.so', 'libalsautils-v33.so')
         .binary_regex_replace(b'A2dpsuspendonly', b'A2dpSuspended\x00\x00')
         .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00'),
+    'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
+        .add_needed('libprocessgroup_shim.so')
+        .binary_regex_replace(b'NTFingerprintDimLayer', b'SurfaceView[UdfpsCont'),
     (
-        'vendor/lib64/hw/hwcomposer.mtk_common.so',
         'vendor/lib64/mt6886/libcam.hal3a.so',
         'vendor/lib64/mt6886/libcam.hal3a.ctrl.so',
         'vendor/lib64/mt6886/libmtkcam_cputrack.so',
