@@ -60,6 +60,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('blob-patches/ImsService'),
+    'system_ext/priv-app/LPPeService/LPPeService.apk': blob_fixup()
+        .apktool_patch('blob-patches/LPPeService'),
     (
         'vendor/bin/hw/mt6886/android.hardware.graphics.allocator-V2-service-mediatek.mt6886',
         'vendor/lib64/hw/mt6886/android.hardware.graphics.allocator-V2-mediatek.so',
