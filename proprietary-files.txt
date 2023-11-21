@@ -54,7 +54,6 @@ vendor/lib64/libvow_ap_test_trip_ha.so
 vendor/lib64/libvow_ap_test_trip_hh.so
 vendor/lib64/libvow_ap_test_trip_nn.so
 vendor/lib64/libvow_comp_test.so
-vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdiraceffect_NT.so
 vendor/lib64/soundfx/libspatializer.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
