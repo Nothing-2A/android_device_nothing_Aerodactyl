@@ -84,7 +84,6 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(BOARD_KERNEL_MODULE_DIR)/gps_drv_dl_v051.ko \
     $(BOARD_KERNEL_MODULE_DIR)/gps_pwr.ko \
     $(BOARD_KERNEL_MODULE_DIR)/gps_scp.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/msync2_frd.ko \
     $(BOARD_KERNEL_MODULE_DIR)/wlan_drv_gen4m_6886.ko \
     $(BOARD_KERNEL_MODULE_DIR)/wmt_chrdev_wifi_connac2.ko
 
