@@ -4,12 +4,20 @@ aaudio.mmap_policy=2
 audio.deep_buffer.media
 audio.offload.min.duration.secs=30
 audio.offload.video=true
+persist.vendor.audiohal.aurisys.pcm_dump_on=0
+persist.vendor.audiohal.p2w_dump_on=0
+persist.vendor.audiohal.pcm_mixer_dump_on=0
 persist.vendor.newdirac.cur.config=MUSIC
 persist.vendor.newdirac.enable.value=1.000000
 persist.vendor.newdirac.volume.value=0.000000
 vendor.audio.powerhal.power.ul=true
 vendor.audio.usb.iems.period_us=5000
 vendor.audio.usb.super_hifi=true
+vendor.usbsph.dl.pcm.dump=0
+vendor.usbsph.ul.pcm.dump=0
+vendor.usbsph.srcaws.pcm.dump=0
+vendor.streamout.pcm.dump=0
+vendor.streamin.pcm.dump=0
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
