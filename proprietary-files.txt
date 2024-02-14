@@ -1336,11 +1336,9 @@ vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 vendor/bin/thermal_core
 vendor/bin/thermal_intf
 vendor/etc/fstb.cfg
-vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
 vendor/etc/init/init.thermal_core.rc
 vendor/etc/mpe.conf
 vendor/etc/thermal/disable_skin_control.conf
@@ -1362,7 +1360,6 @@ vendor/etc/thermal/thermal_policy_12.conf
 vendor/etc/thermal/thermal_policy_13.conf
 vendor/etc/thermal/thermal_policy_14.conf
 vendor/etc/thermal/thermal_policy_15.conf
-vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 
 # Trusted Execution Environment (TEE)
 vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
