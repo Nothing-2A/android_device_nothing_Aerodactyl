@@ -235,6 +235,11 @@ ro.vendor.pq.mtk_video_transition=0
 ro.vendor.mediatek.platform=MT6886
 ro.vendor.mgk_name=mgk_64_k515
 
+# Power
+vendor.powerhal.interaction.min=10
+vendor.powerhal.interaction.max=50
+vendor.powerhal.interaction.offset=0
+
 # Radio
 persist.radio.multisim.config=dsds
 persist.vendor.connsys.chipid=-1
