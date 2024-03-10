@@ -53,6 +53,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/vendor.noth.hardware.charge-service': blob_fixup()
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
     (
         'vendor/lib64/hw/hwcomposer.mtk_common.so',
