@@ -21,4 +21,7 @@
         <item>260</item>
         <item>0</item>
     </integer-array>
+
+    <!-- Show battery cycle count -->
+    <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
 </resources>
