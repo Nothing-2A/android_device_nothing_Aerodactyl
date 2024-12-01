@@ -207,6 +207,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     NothingFrameworksResTarget \
+    NothingSettingsResTarget \
     NothingSystemUIResTarget \
     NothingTelephonyResTarget \
     NothingWifiResTarget
