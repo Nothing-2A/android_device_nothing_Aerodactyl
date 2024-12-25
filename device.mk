@@ -203,6 +203,9 @@ PRODUCT_PACKAGES += \
     NothingTelephonyResTarget \
     NothingWifiResTarget
 
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
