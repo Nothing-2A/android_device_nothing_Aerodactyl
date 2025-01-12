@@ -124,9 +124,6 @@ ro.vendor.fingerprint.sensor_location=542|2172|93
 persist.vendor.connsys.fm_chipid=mt6635
 ro.vendor.fm.platform=connac2x
 
-# FRP
-ro.frp.pst=/dev/block/by-name/frp
-
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
