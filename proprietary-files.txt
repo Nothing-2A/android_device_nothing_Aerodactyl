@@ -1340,6 +1340,10 @@ vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
 
+# Vibrator (AAC RichTap)
+vendor/etc/aac_richtap.config
+vendor/lib64/libaacvibrator.so
+
 # Vibrator firmware (aw8692x vibrator)
 vendor/firmware/haptic_ram.bin
 vendor/firmware/haptic_rtp.bin
