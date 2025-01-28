@@ -1,0 +1,6 @@
+service vendor.vibrator /vendor/bin/hw/android.hardware.vibrator.service.aerodactyl-richtap
+    class hal
+    user system
+    group system input
+    setenv RICHTAP_DEVICE_PATH /dev/aac_richtap
+    setenv ENV_RICHTAP_CONFIG_PATH /vendor/etc/aac_richtap.config

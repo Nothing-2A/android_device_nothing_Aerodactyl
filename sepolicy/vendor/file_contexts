@@ -48,4 +48,4 @@
 /vendor/bin/hw/vendor\.noth\.hardware\.sensor\.sensor_extension-service    u:object_r:hal_sensors_default_exec:s0
 
 # Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service    u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.vibrator\.service\.aerodactyl-richtap    u:object_r:hal_vibrator_default_exec:s0
