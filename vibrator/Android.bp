@@ -25,3 +25,8 @@ cc_binary {
         "android.hardware.vibrator-V2-ndk",
     ],
 }
+
+cc_library_shared {
+    name: "libaacvibrator",
+    soc_specific: true,
+}
