@@ -7,6 +7,9 @@ ro.camera.sound.forced=0
 # Camera
 ro.camera.notify_nfc=1
 
+# Display
+sys.brightness.disable_gamma_conversion=true
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
