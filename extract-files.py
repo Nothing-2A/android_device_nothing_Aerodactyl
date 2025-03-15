@@ -50,6 +50,14 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
+    (
+        'vendor/lib64/hw/hwcomposer.mtk_common.so',
+        'vendor/lib64/mt6886/libcam.hal3a.so',
+        'vendor/lib64/mt6886/libcam.hal3a.ctrl.so',
+        'vendor/lib64/mt6886/libmtkcam_cputrack.so',
+        'vendor/lib64/mt6886/libmtkcam_request_requlator.so'
+    ): blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
