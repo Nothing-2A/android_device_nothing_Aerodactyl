@@ -44,6 +44,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/android.hardware.power-service-mediatek.so'
     ): blob_fixup()
         .replace_needed('android.hardware.power-V3-ndk.so', 'android.hardware.power-V2-ndk.so'),
+    'vendor/bin/hw/vendor.noth.hardware.camera-service': blob_fixup()
+        .add_needed('libui_shim.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
 }  # fmt: skip
