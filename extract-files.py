@@ -57,7 +57,9 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
-        .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
+        .replace_needed('libalsautils.so', 'libalsautils-v33.so')
+        .binary_regex_replace(b'A2dpsuspendonly', b'A2dpSuspended\x00\x00')
+        .binary_regex_replace(b'BTAudiosuspend', b'A2dpSuspended\x00'),
     (
         'vendor/lib64/hw/hwcomposer.mtk_common.so',
         'vendor/lib64/mt6886/libcam.hal3a.so',
