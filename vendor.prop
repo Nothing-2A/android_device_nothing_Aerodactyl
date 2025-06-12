@@ -166,6 +166,7 @@ ro.incremental.enable=yes
 # HWUI
 debug.hwui.target_cpu_time_percent=30
 debug.hwui.use_hint_manager=true
+debug.sf.enable_adpf_cpu_hint=true
 
 # Keystore
 ro.hardware.kmsetkey=trustonic
