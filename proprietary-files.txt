@@ -273,6 +273,8 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
+system_ext/etc/permissions/advancedSample_camera_extensions.xml
+system_ext/framework/androidx.camera.extensions.impl.advanced.jar;MAKE_COPY_RULE_ONLY
 vendor/bin/hw/mt6886/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
 vendor/bin/mt6886/jpegtool;SYMLINK=vendor/bin/jpegtool
 vendor/etc/camera/AI_Seg_v0.2.29.1_nothing.bin
