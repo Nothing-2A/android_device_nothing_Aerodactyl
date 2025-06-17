@@ -82,3 +82,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
 	hardware/mediatek
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/nothing/Pacman/Pacman-vendor.mk)
