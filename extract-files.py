@@ -58,6 +58,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/mt6886/libmtkcam_request_requlator.so'
     ): blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
+    'vendor/lib64/mt6886/libmorpho_video_stabilizer.so': blob_fixup()
+        .add_needed('libutils.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
