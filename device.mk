@@ -196,6 +196,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JPN/android.hardware.se.omapi.ese.xml
 
+# Overlays
+PRODUCT_PACKAGES += \
+    NothingFrameworksResTarget \
+    NothingSystemUIResTarget \
+    NothingTelephonyResTarget \
+    NothingWifiResTarget
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
