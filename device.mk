@@ -142,7 +142,18 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6886 \
-    fstab.mt6886.vendor_ramdisk
+    fstab.mt6886.vendor_ramdisk \
+    init_conninfra.rc \
+    init.connectivity.common.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6886.rc \
+    init.mt6886.power.rc \
+    init.mt6886.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6886.rc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.mt6886.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6886.rc
