@@ -21,9 +21,6 @@ on init
 
     mkdir /mnt/cd-rom 0000 system system
 
-    # Property used for sku specific sysconfig and permissions
-    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
-
 # change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env

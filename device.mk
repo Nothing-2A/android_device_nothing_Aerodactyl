@@ -151,6 +151,7 @@ PRODUCT_PACKAGES += \
     init.mt6886.power.rc \
     init.mt6886.usb.rc \
     init.mtkgki.rc \
+    init.nothing.hw.rc \
     init.project.rc \
     init.sensor_2_0.rc \
     ueventd.mt6886.rc
