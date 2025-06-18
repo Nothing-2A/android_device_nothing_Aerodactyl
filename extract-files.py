@@ -39,6 +39,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libsink.so', 'libsink-mtk.so'),
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.trustonic': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    (
+        'vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service',
+        'vendor/lib64/android.hardware.power-service-mediatek.so'
+    ): blob_fixup()
+        .replace_needed('android.hardware.power-V3-ndk.so', 'android.hardware.power-V2-ndk.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .replace_needed('libalsautils.so', 'libalsautils-v33.so'),
 }  # fmt: skip
