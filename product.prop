@@ -1,0 +1,11 @@
+# Audio
+ro.audio.monitorRotation=true
+
+# Camera
+ro.camerax.extensions.enabled=true
+
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
+# Voice assitant
+ro.opa.eligible_device=true

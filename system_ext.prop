@@ -1,0 +1,19 @@
+# Audio
+ro.audio.silent=0
+ro.audio.flinger_standbytime_ms=1000
+ro.audio.usb.period_us=16000
+ro.camera.sound.forced=0
+
+# Camera
+ro.camera.notify_nfc=1
+
+# Radio
+persist.radio.nt.modem.svn=21
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+
+# Wifi
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
