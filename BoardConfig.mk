@@ -88,12 +88,12 @@ BOARD_VENDOR_KERNEL_MODULES += \
 # Partitions
 AB_OTA_PARTITIONS += \
     boot \
-	init_boot \
+    init_boot \
     odm \
     odm_dlkm \
     product \
     system \
-	system_dlkm \
+    system_dlkm \
     system_ext \
     vbmeta \
     vbmeta_system \
