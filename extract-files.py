@@ -65,7 +65,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/libnfc-hal-st-st54j.conf'
     ): blob_fixup()
         .regex_replace('# STNFC_FW_BIN_NAME', 'STNFC_FW_BIN_NAME')
-        .regex_replace('# STNFC_FW_CONF_NAME', 'STNFC_FW_CONF_NAME'),
+        .regex_replace('# STNFC_FW_CONF_NAME', 'STNFC_FW_CONF_NAME')
+        .regex_replace('STNFC_FW_DEBUG_ENABLED=1', 'STNFC_FW_DEBUG_ENABLED=0'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libalsautils.so', 'libalsautils-v33.so')
