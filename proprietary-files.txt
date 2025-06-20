@@ -1161,6 +1161,7 @@ vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 vendor/etc/libnfc-hal-st-st54j.conf
 vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci.conf
+vendor/etc/libse-gto-hal.conf
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 vendor/firmware/st54j_fw.bin
