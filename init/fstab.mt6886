@@ -46,3 +46,6 @@ odm_dlkm                                            /odm_dlkm                ext
 /devices/platform/soc/11211000.usb1/11210000.xhci*  auto                     vfat     defaults                                                       voldmanaged=usbotg:auto
 /devices/platform/soc/11240000.mmc*                 auto                     auto     defaults                                                       voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/usb_xhci*                         auto                     vfat     defaults                                                       voldmanaged=usbotg:auto
+
+/dev/block/by-name/nt_log                           /mnt/product/nt_log      ext4     noatime,nosuid,nodev,discard,barrier=1                         wait,check,formattable,first_stage_mount,nofail
+/dev/block/by-name/nt_log                           /mnt/vendor/nt_log       ext4     noatime,nosuid,nodev,discard,barrier=1                         wait,check,formattable,first_stage_mount,nofail
