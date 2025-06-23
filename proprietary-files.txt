@@ -274,7 +274,6 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 vendor/bin/hw/mt6886/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
-vendor/bin/hw/vendor.noth.hardware.camera-service
 vendor/bin/mt6886/jpegtool;SYMLINK=vendor/bin/jpegtool
 vendor/etc/camera/AI_Seg_v0.2.29.1_nothing.bin
 vendor/etc/camera/CFR_para4_Nothing_23111_UW_v8200-4.bin
@@ -299,9 +298,7 @@ vendor/etc/camera/nothing_pipeline.bin
 vendor/etc/camera/ntcamoverridesettings.txt
 vendor/etc/default_pd_calibration.bin
 vendor/etc/init/camerahalserver.rc
-vendor/etc/init/vendor.noth.hardware.camera-service.rc
 vendor/etc/vintf/manifest/manifest_cameraprovider.xml
-vendor/etc/vintf/manifest/vendor.noth.hardware.camera-service.xml
 vendor/lib64/camera/node/com.nothing.node.b2y.so
 vendor/lib64/camera/node/com.nothing.node.beauty.so
 vendor/lib64/camera/node/com.nothing.node.bokehcapture.so
@@ -743,7 +740,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
-vendor/lib64/vendor.noth.hardware.camera-V1-ndk.so
 
 # Camera firmware
 vendor/firmware/lib3a.ccu
