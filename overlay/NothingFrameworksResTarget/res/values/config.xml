@@ -446,12 +446,12 @@
 
     <!-- Default files to pin via Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>/system/framework/arm/boot-core-libart.oat</item>
-        <item>/system/framework/arm/boot-conscrypt.oat</item>
-        <item>/system/framework/arm/boot-core-libart.vdex</item>
-        <item>/system/framework/arm/boot-ext.vdex</item>
-        <item>/system/framework/arm/boot.vdex</item>
-        <item>/system/framework/arm/boot-framework.vdex</item>
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
+        <item>/system/bin/surfaceflinger</item>
+        <item>/system_ext/priv-app/SystemUI/SystemUI.apk</item>
         <item>/vendor/lib64/libaaa_gma.so</item>
         <item>/vendor/lib64/libbwc.so</item>
         <item>/vendor/lib64/libcamalgo.InlineCompGyro.so</item>
