@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_nothing_pacman)
 
 PRODUCT_PACKAGES += \
+    fstab.enableswap \
     fstab.mt6886 \
     fstab.mt6886.vendor_ramdisk \
     init_conninfra.rc \

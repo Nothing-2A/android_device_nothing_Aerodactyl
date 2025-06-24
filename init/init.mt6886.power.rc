@@ -57,7 +57,7 @@ on property:sys.boot_completed=1
     write /sys/block/sdc/queue/nr_requests 64
 
     # zram
-    #swapon_all /vendor/etc/fstab.enableswap
+    swapon_all /vendor/etc/fstab.enableswap
 
     write /proc/sys/kernel/sched_migration_cost_ns 200000
 
