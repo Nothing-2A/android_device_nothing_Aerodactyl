@@ -145,6 +145,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek-recovery
 
 # Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_nothing_pacman)
+
 PRODUCT_PACKAGES += \
     fstab.mt6886 \
     fstab.mt6886.vendor_ramdisk \
