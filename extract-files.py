@@ -31,7 +31,10 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
-    'vendor.mediatek.hardware.videotelephony@1.0': lib_fixup_vendor_suffix,
+    (
+        'vendor.mediatek.hardware.camera.isphal@1.0',
+        'vendor.mediatek.hardware.videotelephony@1.0'
+    ): lib_fixup_vendor_suffix,
 }
 
 
@@ -55,6 +58,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libstagefright_foundation-v33.so'),
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.trustonic': blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+    'vendor/bin/hw/vendor.noth.hardware.camera-service': blob_fixup()
+        .add_needed('libui_shim.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libalsautils.so', 'libalsautils-v33.so')

@@ -82,6 +82,12 @@ TARGET_SCREEN_HEIGHT := 2412
 TARGET_SCREEN_WIDTH := 1080
 
 # Camera
+$(call inherit-product, hardware/mediatek/mtk-fwk/mtk-fwk.mk)
+$(call inherit-product, hardware/nothing/nt-fwk/nt-fwk.mk)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/linkerconfig/public.libraries.system_ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries.txt
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \

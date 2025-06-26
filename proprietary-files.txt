@@ -273,8 +273,6 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
-system_ext/etc/permissions/advancedSample_camera_extensions.xml
-system_ext/framework/androidx.camera.extensions.impl.advanced.jar;MAKE_COPY_RULE_ONLY
 vendor/bin/hw/mt6886/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
 vendor/bin/mt6886/jpegtool;SYMLINK=vendor/bin/jpegtool
 vendor/etc/camera/AI_Seg_v0.2.29.1_nothing.bin
@@ -738,10 +736,28 @@ vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
-vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
+
+# Camera (NTCamera app)
+system/etc/sysconfig/nothing-hiddenapi-package-allowlist.xml
+system/lib64/libnelib.so
+system_ext/etc/permissions/advancedSample_camera_extensions.xml
+system_ext/etc/permissions/com.nothing.feature.xml
+system_ext/etc/permissions/privapp-permissions-NothingExperience.xml
+system_ext/etc/permissions/privapp-permissions-NTCamera.xml
+system_ext/framework/androidx.camera.extensions.impl.advanced.jar;MAKE_COPY_RULE_ONLY
+system_ext/priv-app/NothingExperience/NothingExperience.apk
+system_ext/priv-app/NTCamera/NTCamera.apk;OVERRIDES=Aperture,Camera2
+system_ext/lib64/libofflineproc_jni.so
+system_ext/lib64/libmtkisp_metadata_sys.so
+system_ext/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+vendor/bin/hw/vendor.noth.hardware.camera-service
+vendor/etc/init/vendor.noth.hardware.camera-service.rc
+vendor/etc/vintf/manifest/vendor.noth.hardware.camera-service.xml
+vendor/lib64/vendor.noth.hardware.camera-V1-ndk.so
 
 # Camera firmware
 vendor/firmware/lib3a.ccu
