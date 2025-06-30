@@ -120,6 +120,10 @@ vendor.mtk.hwc.HWC_PLAT_SWITCH_EXTEND_SF_TARGET_TS_FOR_VIDEO=1
 # DRM
 drm.service.enabled=true
 
+# Fingerprint
+ro.vendor.fingerprint.type=udfps_optical
+ro.vendor.fingerprint.sensor_location=542|2172|93
+
 # FM
 persist.vendor.connsys.fm_chipid=mt6635
 ro.vendor.fm.platform=connac2x
