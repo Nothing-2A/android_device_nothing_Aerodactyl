@@ -1,0 +1,8 @@
+# Display
+type vendor_sysfs_graphics, fs_type, sysfs_type;
+
+# Fingerprint
+type vendor_goodix_gf_data_file, file_type, data_file_type;
+
+# NTF
+type vendor_ntf_file, file_type;

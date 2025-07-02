@@ -1,0 +1,2 @@
+# LEDs
+type led_device, dev_type;
