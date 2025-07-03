@@ -19,7 +19,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/nothing/Pacman',
+    'device/nothing/Aerodactyl',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
 ]
@@ -108,7 +108,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'Pacman',
+    'Aerodactyl',
     'nothing',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

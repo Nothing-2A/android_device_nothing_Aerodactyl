@@ -5,7 +5,7 @@
 
 BUILD_BROKEN_DUP_RULES := true
 
-DEVICE_PATH := device/nothing/Pacman
+DEVICE_PATH := device/nothing/Aerodactyl
 KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # Architecture
@@ -16,7 +16,6 @@ TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := Pacman
 TARGET_NO_BOOTLOADER := true
 
 # Display
@@ -210,4 +209,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_FEATURE_HOSTAPD_11AX := true
 
 # Inherit the proprietary files
-include vendor/nothing/Pacman/BoardConfigVendor.mk
+include vendor/nothing/Aerodactyl/BoardConfigVendor.mk
