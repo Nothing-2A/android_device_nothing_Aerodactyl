@@ -666,7 +666,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
 # Camera (Nothing algo tuning)
-vendor/bin/hw/vendor.noth.hardware.camera-service
 vendor/etc/camera/AI_Seg_v0.2.29.1_nothing.bin
 vendor/etc/camera/CFR_para4_Nothing_23111_UW_v8200-4.bin
 vendor/etc/camera/CFR_para4_Nothing_23111_W_v8210-1.bin
@@ -680,7 +679,6 @@ vendor/etc/camera/morpho_raw_deep_denoise_model.bin
 vendor/etc/camera/morpho_raw_deep_denoise_tuning_params.xml
 vendor/etc/camera/nothing_node.bin
 vendor/etc/camera/nothing_noise_stat.bin
-vendor/etc/camera/nothing_pipeline.bin
 vendor/etc/camera/ntcamoverridesettings.txt
 vendor/etc/init/vendor.noth.hardware.camera-service.rc
 vendor/etc/vintf/manifest/vendor.noth.hardware.camera-service.xml
@@ -700,8 +698,6 @@ vendor/lib64/camera/node/com.nothing.node.memcpy.so
 vendor/lib64/camera/node/com.nothing.node.mmf.so
 vendor/lib64/camera/node/com.nothing.node.p2y.so
 vendor/lib64/camera/node/com.nothing.node.portrait.so
-vendor/lib64/camera/node/com.nothing.node.rawhdr.front.so
-vendor/lib64/camera/node/com.nothing.node.rawhdr.so
 vendor/lib64/camera/node/com.nothing.node.supernight.so
 vendor/lib64/camera/node/com.nothing.node.superportraitnight.so
 vendor/lib64/camera/node/com.nothing.node.watermark.so
@@ -729,7 +725,6 @@ vendor/lib64/libmorpho_RawDeepDenoise.so
 vendor/lib64/libmouth_mask_detection.arcsoft.so
 vendor/lib64/libntcamallocator.so
 vendor/lib64/libntcamcommonutils.so
-vendor/lib64/libntcamcore.so
 vendor/lib64/libntcamera2ndk_vendor.so
 vendor/lib64/libntcamextened.so
 vendor/lib64/libntcamimage_io.so
@@ -741,10 +736,7 @@ vendor/lib64/libntcamthread.so
 vendor/lib64/libntcamyuv.so
 vendor/lib64/libntofflinepostproc.so
 vendor/lib64/libportrait_repair_apu.so
-vendor/lib64/libst_ns_models.so
 vendor/lib64/libstmobile_rater.so
-vendor/lib64/libttm_nightsight.so
-vendor/lib64/libttm_nightsight_ae.so
 vendor/lib64/vendor.noth.hardware.camera-V1-ndk.so
 
 # Camera (NTCamera app)
@@ -1115,9 +1107,6 @@ vendor/lib64/libmvpuop_mtk_nn.so
 vendor/bin/init.insmod.sh
 vendor/etc/init.insmod.mt6886.cfg
 
-# Native public libraries
-vendor/etc/public.libraries.txt
-
 # Neural Networks
 vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
 vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
@@ -1351,34 +1340,6 @@ vendor/etc/thermal/thermal_policy_14.conf
 vendor/etc/thermal/thermal_policy_15.conf
 
 # Trusted Execution Environment (TEE)
-vendor/app/mcRegistry/020f0000000000000000000000000000.drbin
-vendor/app/mcRegistry/020f0000000000000000000000000000.tlbin
-vendor/app/mcRegistry/031c0000000000000000000000000000.drbin
-vendor/app/mcRegistry/031c0000000000000000000000000000.tlbin
-vendor/app/mcRegistry/05060000000000000000000000000000.tabin
-vendor/app/mcRegistry/05070000000000000000000000000000.drbin
-vendor/app/mcRegistry/05070000000000000000000000000000.tlbin
-vendor/app/mcRegistry/05120000000000000000000000000001.drbin
-vendor/app/mcRegistry/05120000000000000000000000000001.tlbin
-vendor/app/mcRegistry/06090000000000000000000000000000.drbin
-vendor/app/mcRegistry/06090000000000000000000000000000.tlbin
-vendor/app/mcRegistry/0706000000000000000000000000004d.tlbin
-vendor/app/mcRegistry/07061000000000000000000000000000.tlbin
-vendor/app/mcRegistry/07150000000000000000000000000000.drbin
-vendor/app/mcRegistry/07150000000000000000000000000000.tlbin
-vendor/app/mcRegistry/07170000000000000000000000000000.drbin
-vendor/app/mcRegistry/07170000000000000000000000000000.tlbin
-vendor/app/mcRegistry/08030000000000000000000000000000.tabin
-vendor/app/mcRegistry/08040000000000000000000000003419.tabin
-vendor/app/mcRegistry/08050000000000000000000000003419.drbin
-vendor/app/mcRegistry/08050000000000000000000000003419.tlbin
-vendor/app/mcRegistry/08110000000000000000000000000000.tabin
-vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.drbin
-vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.tlbin
-vendor/app/mcRegistry/5020170115e016302017012521300000.drbin
-vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin
-vendor/app/mcRegistry/abcd270ea5c44c58bcd3384a2fa2539e.tabin
-vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin
 vendor/bin/hw/vendor.trustonic.tee@1.1-service
 vendor/bin/mcDriverDaemon
 vendor/etc/init/tee.rc

@@ -11,3 +11,6 @@ TARGET_BOOTLOADER_BOARD_NAME := Pacman
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/Pacman/vendor.prop
+
+# Inherit the proprietary files
+include vendor/nothing/Pacman/BoardConfigVendor.mk
