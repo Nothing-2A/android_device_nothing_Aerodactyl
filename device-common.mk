@@ -77,6 +77,9 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2412
 TARGET_SCREEN_WIDTH := 1084
 
+# BOARD_PLATFORM
+TARGET_BOARD_PLATFORM := mt6886
+
 # Camera
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.concurrent.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.concurrent.xml \
