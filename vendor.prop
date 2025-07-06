@@ -130,9 +130,6 @@ ro.vendor.fm.platform=connac2x
 # FRP
 ro.frp.pst=/dev/block/by-name/frp
 
-# FUSE
-ro.fuse.bpf.enabled=false
-
 # Gatekeeper
 ro.hardware.gatekeeper=trustonic
 
