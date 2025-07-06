@@ -125,9 +125,4 @@
 
     <!-- boolean indicating whether the Easy Connect (DPP) AKM is supported -->
     <bool translatable="false" name="config_wifiDppAkmSupported">true</bool>
-
-    <!-- Whether to allow Settings or SUW to create insecure Enterprise networks where server
-         certificate is not validated, by not specifying a Root CA certificate and/or server domain
-         name. It is STRONGLY RECOMMENDED to be set to false -->
-    <bool translatable="false" name="config_wifiAllowInsecureEnterpriseConfigurationsForSettingsAndSUW">true</bool>
 </resources>
