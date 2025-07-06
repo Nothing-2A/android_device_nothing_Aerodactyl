@@ -231,13 +231,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
-PRODUCT_PACKAGES += \
-    LineageApertureResTarget \
-    LineageSDKResTarget \
-    LineageSettingsProviderResTarget \
-    LineageSettingsResTarget \
-    LineageSystemUIResTarget
-
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
