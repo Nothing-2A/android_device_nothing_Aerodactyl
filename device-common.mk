@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2412
-TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_WIDTH := 1084
 
 # Camera
 $(call inherit-product, hardware/mediatek/mtk-fwk/mtk-fwk.mk)
