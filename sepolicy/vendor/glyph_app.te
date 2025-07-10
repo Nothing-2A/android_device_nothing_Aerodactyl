@@ -1,0 +1,2 @@
+allow glyph_app persist_data_file:dir r_dir_perms;
+allow glyph_app persist_data_file:file rw_file_perms;
