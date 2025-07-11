@@ -1,3 +1,6 @@
+# Camera
+type dualcam_calibrate, file_type, data_file_type, mlstrustedobject;
+
 # Display
 type vendor_sysfs_graphics, fs_type, sysfs_type;
 

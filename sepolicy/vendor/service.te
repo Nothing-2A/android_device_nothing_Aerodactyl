@@ -1,0 +1,2 @@
+# Camera
+type hal_nothing_camera_aidl_service, hal_service_type, service_manager_type;
