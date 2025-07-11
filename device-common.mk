@@ -224,6 +224,7 @@ PRODUCT_PACKAGES += \
     NcmTetheringOverlay
 
 PRODUCT_PACKAGES += \
+    LineageApertureResTarget \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget \
     LineageSettingsResTarget \
