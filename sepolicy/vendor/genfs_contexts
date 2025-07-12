@@ -1,6 +1,7 @@
 # Charger
 genfscon sysfs /devices/platform/nt_chg/power_supply                           u:object_r:sysfs_power_supply:s0
 genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0065/power_supply    u:object_r:sysfs_power_supply:s0
+genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0067/power_supply    u:object_r:sysfs_power_supply:s0
 
 # Display
 genfscon sysfs /devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0        u:object_r:vendor_sysfs_graphics:s0
@@ -42,6 +43,12 @@ genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0065/power_supply/sc85
 genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0065/power_supply/sc8562-standalone/wakeup157                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0065/power_supply/sc8562-standalone/wakeup158                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0065/wakeup                                                            u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0067/power_supply/aw32280-standalone/wakeup154                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0067/power_supply/aw32280-standalone/wakeup155                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0067/power_supply/aw32280-standalone/wakeup156                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0067/power_supply/aw32280-standalone/wakeup157                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0067/power_supply/aw32280-standalone/wakeup158                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/11e81000.i2c/i2c-7/7-0067/wakeup                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-04/wakeup                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-05/wakeup                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c804000.spmi/spmi-0/0-06/wakeup                                                            u:object_r:sysfs_wakeup:s0
