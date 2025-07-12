@@ -1340,15 +1340,17 @@ vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
 
-# Vibrator firmware
-vendor/firmware/100_Haptic.bin
-vendor/firmware/101_Haptic.bin
-vendor/firmware/haptic_config.bin
+# Vibrator firmware (aw8692x vibrator)
 vendor/firmware/haptic_ram.bin
 vendor/firmware/haptic_rtp.bin
 vendor/firmware/haptic_rtp_lighthouse.bin
 vendor/firmware/haptic_rtp_osc_24K_5s.bin
 vendor/firmware/haptic_rtp_silk.bin
+
+# Vibrator firmware (rt6010 vibrator)
+vendor/firmware/100_Haptic.bin
+vendor/firmware/101_Haptic.bin
+vendor/firmware/haptic_config.bin
 
 # Widevine
 vendor/bin/hw/android.hardware.drm-service.widevine
