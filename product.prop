@@ -1,9 +1,6 @@
 # Audio
 ro.audio.monitorRotation=true
 
-# Camera
-ro.camerax.extensions.enabled=true
-
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 

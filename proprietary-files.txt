@@ -650,10 +650,6 @@ vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
 vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
-# Camera (CameraX extensions)
-system_ext/etc/permissions/advancedSample_camera_extensions.xml
-system_ext/framework/androidx.camera.extensions.impl.advanced.jar;MAKE_COPY_RULE_ONLY
-
 # Camera (Nothing algo tuning)
 vendor/etc/camera/AI_Seg_v0.2.29.1_nothing.bin
 vendor/etc/camera/CFR_para4_Nothing_23111_UW_v8200-4.bin
