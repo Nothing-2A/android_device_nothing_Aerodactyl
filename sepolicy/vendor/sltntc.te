@@ -1,0 +1,5 @@
+allow sltntc sysfs_chipid:file r_file_perms;
+allow sltntc sysfs_soc:dir search;
+
+r_dir_file(sltntc, sysfs_therm)
+allow sltntc vendor_sysfs_virtual_temp:file rw_file_perms;

@@ -1,0 +1,1 @@
+allow init vendor_sysfs_virtual_temp:file { setattr r_file_perms };

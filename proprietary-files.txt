@@ -1132,6 +1132,13 @@ vendor/etc/thermal/thermal_policy_13.conf
 vendor/etc/thermal/thermal_policy_14.conf
 vendor/etc/thermal/thermal_policy_15.conf
 
+# Thermal - SLTNTC
+system_ext/bin/sltntc
+system_ext/etc/init/sltntc.rc
+system_ext/etc/sltntc/sltntc.conf
+system_ext/etc/sltntc/sltntc_MT6886.conf
+vendor/etc/sltntc/sltntc.conf
+
 # Vibrator
 vendor/etc/aac_richtap.config
 vendor/lib64/libaacvibrator.so

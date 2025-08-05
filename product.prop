@@ -36,6 +36,9 @@ persist.sys.fuse.passthrough.enable=true
 # RKP
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
 
+# Thermal
+persist.sys.sltntc.enable=1
+
 # Voice assitant
 ro.opa.eligible_device=true
 
