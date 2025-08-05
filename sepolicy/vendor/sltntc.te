@@ -1,0 +1,1 @@
+allow sltntc vendor_sysfs_virtual_temp:file rw_file_perms;
