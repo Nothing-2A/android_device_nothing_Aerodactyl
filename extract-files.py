@@ -109,6 +109,8 @@ blob_fixups: blob_fixups_user_type = {
         .clear_symbol_version('AHardwareBuffer_describe'),
     'vendor/lib64/libntcamskia.so': blob_fixup()
         .add_needed('libnativewindow.so'),
+    'vendor/bin/hw/mtkfusionrild': blob_fixup()
+        .add_needed('libutils-v34.so'),
     'vendor/lib64/libnvram.so': blob_fixup()
         .add_needed('libbase_shim.so'),
 }  # fmt: skip
