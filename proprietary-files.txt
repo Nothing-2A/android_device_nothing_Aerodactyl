@@ -1122,6 +1122,8 @@ vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nci-felica.conf
 vendor/etc/libse-gto-hal.conf
+vendor/etc/st21nfc_conf.txt
+vendor/etc/st54j_conf.txt
 vendor/firmware/st21nfc_fw7.bin
 vendor/firmware/st54j_fw.bin
 
