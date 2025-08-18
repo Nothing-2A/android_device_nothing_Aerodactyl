@@ -165,6 +165,9 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6886.rc
 
+PRODUCT_PACKAGES += \
+    init.insmod.sh
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.recovery.mt6886.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6886.rc
 

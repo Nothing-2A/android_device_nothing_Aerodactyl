@@ -1067,7 +1067,6 @@ vendor/lib64/libmvpuop_mtk_cv.so
 vendor/lib64/libmvpuop_mtk_nn.so
 
 # Modules
-vendor/bin/init.insmod.sh
 vendor/etc/init.insmod.mt6886.cfg
 
 # Neural Networks
