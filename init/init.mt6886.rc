@@ -39,16 +39,6 @@ on late-init
     write /proc/bootprof "INIT:late-init"
 
 # mount different fs start
-# change by NT@{
-on property:sys.boot_completed=1 && property:sys.service.ageTest_running.upload.enable=false
-    write /proc/charger/is_aging_test 0
-on property:sys.boot_completed=1 && property:sys.service.ageTest_running.upload.enable=true
-    write /proc/charger/is_aging_test 1
-on property:sys.boot_completed=1 && property:sys.service.ntmonkey.run=false
-    write /proc/charger/is_aging_test 0
-on property:sys.boot_completed=1 && property:sys.service.ntmonkey.run=true
-    write /proc/charger/is_aging_test 1
-# @}
 
 on charger
     exec /system/bin/e2fsck -f -p /dev/block/by-name/cache
@@ -1113,20 +1103,6 @@ on boot
     chmod 770 /proc/nt_value_check/value_check_node
     chown system system /proc/nt_value_check/value_check_node
 
-#add by Dylan for TFT-456
-on property:sys.system_server.start_count=1
-    write /sys/devices/virtual/NT/NT_reserve_kernel_log/boot_stage_systemserver 1
-
-#add by Dylan for TFT-1024
-on property:persist.sys.mglru_enable=true
-    write /sys/kernel/mm/lru_gen/enabled y
-
-on property:persist.sys.mglru_enable=false
-    write /sys/kernel/mm/lru_gen/enabled n
-
-on property:persist.sys.mglru_min_ttl_ms=*
-    write /sys/kernel/mm/lru_gen/min_ttl_ms ${persist.sys.mglru_min_ttl_ms}
-
 on property:vold.decrypt=trigger_reset_main
     write /proc/bootprof "INIT:vold.decrypt=trigger_reset_main"
     setprop sys.boot_completed 0
@@ -1273,46 +1249,3 @@ service osi /system/bin/osi
     disabled
     oneshot
     #seclabel u:r:osi:s0
-
-# Add by Bruce for AERO-110
-on property:sys.touch.game_mode.enable=*
-    write /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_game_mode ${sys.touch.game_mode.enable}
-on property:sys.touch.edge_mode.enable=*
-    write /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_edge_mode ${sys.touch.edge_mode.enable}
-on property:sys.touch.fod_en.enable=*
-    write /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_fod_mode ${sys.touch.fod_en.enable}
-on property:sys.touch.single_en.enable=*
-    write /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_mode ${sys.touch.single_en.enable}
-on property:=sys.touch.pocket_mode=*
-    write /sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_pocket_mode ${sys.touch.pocket_mode}
-
-# add to fix AERO-786
-on property:sys.ship_mode.enable=0
-    write /proc/charger/ship_mode 0
-on property:sys.ship_mode.enable=1
-    write /proc/charger/ship_mode 1
-
-#add by Kenneth for TFT-1883
-on property:persist.sys.nmm.wm_scale_factor=*
-    write /proc/sys/vm/watermark_scale_factor ${persist.sys.nmm.wm_scale_factor}
-on property:persist.sys.nmm.swappiness=*
-    write /proc/sys/vm/swappiness ${persist.sys.nmm.swappiness}
-
-on property:persist.sys.nmm.boost.camera=*
-    write /proc/sys/vm/compact_memory 1
-
-# lio.chen@CoreBSP, Optimizing OTG I/O efficiency
-on property:sys.otg.enable=1
-    write /sys/dev/block/${sys.otg.devid}/queue/read_ahead_kb 2048
-    write /sys/dev/block/${sys.otg.devid}/queue/iosched/fifo_batch 1
-    write /sys/dev/block/${sys.otg.devid}/queue/iosched/read_expire 100
-    write /sys/dev/block/${sys.otg.devid}/queue/iosched/writes_starved 10
-    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 0
-    write /sys/devices/platform/soc/112b0000.ufshci/auto_hibern8 0
-    write /dev/sys/block/by-name/userdata/queue/read_ahead_kb 2048
-
-on property:sys.otg.enable=0
-    write /sys/devices/platform/soc/112b0000.ufshci/clkgate_enable 1
-    write /sys/devices/platform/soc/112b0000.ufshci/auto_hibern8 1000
-    write /dev/sys/block/by-name/userdata/queue/read_ahead_kb 1024
-
