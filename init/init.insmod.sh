@@ -23,12 +23,11 @@ if [ -f $cfg_file ]; then
       "modprobe")
         case ${arg} in
           "-b *" | "-b")
-            arg="-b $(cat /vendor/lib/modules/modules.load)" ;;
+            arg="-b $(cat /vendor_dlkm/lib/modules/modules.load)" ;;
           "*" | "")
-            arg="$(cat /vendor/lib/modules/modules.load)" ;;
+            arg="$(cat /vendor_dlkm/lib/modules/modules.load)" ;;
         esac
-        modprobe -a -d /vendor/lib/modules $arg ;;
+        modprobe -a -d /vendor_dlkm/lib/modules $arg ;;
     esac
   done < $cfg_file
 fi
-
