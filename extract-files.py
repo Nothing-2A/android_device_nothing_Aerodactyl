@@ -54,7 +54,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so'),
     'vendor/bin/hw/android.hardware.security.keymint@2.0-service.trustonic': blob_fixup()
-        .add_needed('android.hardware.security.rkp-V3-ndk.so'),
+        .add_needed('android.hardware.security.rkp-V2-ndk.so'),
     'vendor/bin/hw/mt6886/camerahalserver': blob_fixup()
         .add_needed('libcamera_metadata_shim.so'),
     'vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc': blob_fixup()
