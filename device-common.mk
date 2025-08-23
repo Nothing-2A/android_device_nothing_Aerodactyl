@@ -228,8 +228,7 @@ PRODUCT_PACKAGES += \
     LineageApertureResTarget \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget \
-    LineageSettingsResTarget \
-    LineageSystemUIResTarget
+    LineageSettingsResTarget
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
