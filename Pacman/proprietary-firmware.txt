@@ -1,0 +1,25 @@
+# All proprietary files from this list, unless pinned and noted otherwise,
+# are from Nothing Phone (2a) (Pacman-V3.2-250815-1642).
+
+apusys.img;AB
+audio_dsp.img;AB
+ccu.img;AB
+connsys_bt.img;AB
+connsys_gnss.img;AB
+connsys_wifi.img;AB
+dpm.img;AB
+dtbo.img;AB
+gpueb.img;AB
+gz.img;AB
+logo.img;AB
+mcf_ota.img;AB
+mcupm.img;AB
+md1img.img;AB
+mvpu_algo.img;AB
+pi_img.img;AB
+preloader_raw.img;AB
+scp.img;AB
+spmfw.img;AB
+sspm.img;AB
+tee.img;AB
+vcp.img;AB
