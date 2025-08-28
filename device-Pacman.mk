@@ -11,7 +11,8 @@ $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_nothing_pac
 
 # Overlays
 PRODUCT_PACKAGES += \
-    NothingWifiResPacman
+    NothingWifiResPacman \
+    SettingsOverlayPacman
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/nothing/Pacman/Pacman-vendor.mk)
