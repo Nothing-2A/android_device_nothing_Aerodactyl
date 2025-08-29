@@ -1,0 +1,31 @@
+[
+  {
+    "repository": "android_device_nothing_Aerodactyl-kernel",
+    "target_path": "device/nothing/Aerodactyl-kernel"
+  },
+  {
+    "repository": "proprietary_vendor_nothing_Aerodactyl",
+    "target_path": "vendor/nothing/Aerodactyl",
+    "branch": "lineage-23.0"
+  },
+  {
+    "repository": "proprietary_vendor_nothing_Pacman",
+    "target_path": "vendor/nothing/Pacman"
+  },
+  {
+    "repository": "proprietary_vendor_nothing_PacmanPro",
+    "target_path": "vendor/nothing/PacmanPro"
+  },
+  {
+    "repository": "android_device_mediatek_sepolicy_vndr",
+    "target_path": "device/mediatek/sepolicy_vndr"
+  },
+  {
+    "repository": "android_hardware_mediatek",
+    "target_path": "hardware/mediatek"
+  },
+  {
+    "repository": "android_hardware_nothing",
+    "target_path": "hardware/nothing"
+  }
+]
