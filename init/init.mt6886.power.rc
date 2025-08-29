@@ -15,16 +15,6 @@ on init
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/top-app/cpus 0-7
 
-    # boot perf. tune
-    write /dev/cpuctl/system-background/cpu.uclamp.min 100
-    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/foreground/cpu.uclamp.min 100
-    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/top-app/cpu.uclamp.min 100
-    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
-    write /dev/cpuctl/background/cpu.uclamp.min 100
-    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 1
-
 on charger
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq 0
     write /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq 0
@@ -52,6 +42,17 @@ on post-fs-data
     write /sys/block/sdb/queue/iostats 0
     write /sys/block/sdc/queue/iostats 0
     write /sys/block/sdc/queue/nr_requests 256
+
+on boot
+    # boot perf. tune
+    write /dev/cpuctl/system-background/cpu.uclamp.min 100
+    write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/foreground/cpu.uclamp.min 100
+    write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/top-app/cpu.uclamp.min 100
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/background/cpu.uclamp.min 100
+    write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 1
 
 on property:sys.boot_completed=1
     # end boot time fs tune
