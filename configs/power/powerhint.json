@@ -5,8 +5,6 @@
       "Path": "/sys/devices/platform/soc/1c00f000.dvfsrc/mtk-dvfsrc-devfreq/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq",
       "Values": [
         "9999999999",
-        "6400000000",
-        "5500000000",
         "4266000000",
         "3200000000",
         "2133000000",
@@ -60,48 +58,72 @@
         "33",
         "34",
         "35",
-        "36"
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48"
       ],
       "ResetOnInit": true,
       "DefaultIndex": 0,
       "Comments": [
-        "[00] freq: 1010000, volt: 71250, vsram: 75000, posdiv: 1, margin: 9375, power: 641",
-        "[01] freq: 995000, volt: 70625, vsram: 75000, posdiv: 1, margin: 9375, power: 633",
-        "[02] freq: 980000, volt: 70000, vsram: 75000, posdiv: 1, margin: 9375, power: 612",
-        "[03] freq: 965000, volt: 70000, vsram: 75000, posdiv: 1, margin: 8750, power: 599",
-        "[04] freq: 950000, volt: 69375, vsram: 75000, posdiv: 2, margin: 8750, power: 579",
-        "[05] freq: 935000, volt: 68750, vsram: 75000, posdiv: 2, margin: 8750, power: 559",
-        "[06] freq: 920000, volt: 68125, vsram: 75000, posdiv: 2, margin: 9375, power: 546",
-        "[07] freq: 905000, volt: 68125, vsram: 75000, posdiv: 2, margin: 8750, power: 540",
-        "[08] freq: 890000, volt: 67500, vsram: 75000, posdiv: 2, margin: 8750, power: 515",
-        "[09] freq: 872000, volt: 66875, vsram: 75000, posdiv: 2, margin: 8750, power: 496",
-        "[10] freq: 854000, volt: 66250, vsram: 75000, posdiv: 2, margin: 8750, power: 473",
-        "[11] freq: 836000, volt: 65625, vsram: 75000, posdiv: 2, margin: 8125, power: 467",
-        "[12] freq: 818000, volt: 65000, vsram: 75000, posdiv: 2, margin: 8125, power: 443",
-        "[13] freq: 800000, volt: 65000, vsram: 75000, posdiv: 2, margin: 7500, power: 432",
-        "[14] freq: 782000, volt: 64375, vsram: 75000, posdiv: 2, margin: 7500, power: 416",
-        "[15] freq: 764000, volt: 63750, vsram: 75000, posdiv: 2, margin: 7500, power: 405",
-        "[16] freq: 746000, volt: 63125, vsram: 75000, posdiv: 2, margin: 7500, power: 384",
-        "[17] freq: 728000, volt: 62500, vsram: 75000, posdiv: 2, margin: 7500, power: 368",
-        "[18] freq: 710000, volt: 61875, vsram: 75000, posdiv: 2, margin: 7500, power: 349",
-        "[19] freq: 692000, volt: 61250, vsram: 75000, posdiv: 2, margin: 7500, power: 339",
-        "[20] freq: 675000, volt: 60625, vsram: 75000, posdiv: 2, margin: 6875, power: 325",
-        "[21] freq: 655000, volt: 60625, vsram: 75000, posdiv: 2, margin: 6250, power: 315",
-        "[22] freq: 635000, volt: 60625, vsram: 75000, posdiv: 2, margin: 5625, power: 305",
-        "[23] freq: 615000, volt: 60625, vsram: 75000, posdiv: 2, margin: 5000, power: 295",
-        "[24] freq: 596000, volt: 60000, vsram: 75000, posdiv: 2, margin: 5000, power: 282",
-        "[25] freq: 576000, volt: 60000, vsram: 75000, posdiv: 2, margin: 4375, power: 272",
-        "[26] freq: 556000, volt: 60000, vsram: 75000, posdiv: 2, margin: 3750, power: 263",
-        "[27] freq: 537000, volt: 59375, vsram: 75000, posdiv: 2, margin: 3750, power: 247",
-        "[28] freq: 517000, volt: 59375, vsram: 75000, posdiv: 2, margin: 3125, power: 242",
-        "[29] freq: 497000, volt: 59375, vsram: 75000, posdiv: 2, margin: 2500, power: 233",
-        "[30] freq: 478000, volt: 58750, vsram: 75000, posdiv: 2, margin: 2500, power: 224",
-        "[31] freq: 458000, volt: 58750, vsram: 75000, posdiv: 3, margin: 1875, power: 214",
-        "[32] freq: 438000, volt: 58750, vsram: 75000, posdiv: 3, margin: 1250, power: 205",
-        "[33] freq: 419000, volt: 58125, vsram: 75000, posdiv: 3, margin: 1250, power: 195",
-        "[34] freq: 399000, volt: 58125, vsram: 75000, posdiv: 3, margin: 625, power: 186",
-        "[35] freq: 379000, volt: 58125, vsram: 75000, posdiv: 3, margin: 0, power: 177",
-        "[36] freq: 360000, volt: 57500, vsram: 75000, posdiv: 3, margin: 0, power: 163"
+        "[00*] freq: 1300000, volt: 81875, vsram: 81875, posdiv: 1, margin: 8125, power: 1093",
+        "[01*] freq: 1250000, volt: 80000, vsram: 80000, posdiv: 1, margin: 8750, power: 1005",
+        "[02*] freq: 1200000, volt: 77500, vsram: 77500, posdiv: 1, margin: 10000, power: 909",
+        "[03*] freq: 1150000, volt: 75625, vsram: 75625, posdiv: 1, margin: 10000, power: 814",
+        "[04*] freq: 1130000, volt: 74375, vsram: 75000, posdiv: 1, margin: 10625, power: 781",
+        "[05*] freq: 1115000, volt: 74375, vsram: 75000, posdiv: 1, margin: 10625, power: 773",
+        "[06*] freq: 1100000, volt: 73750, vsram: 75000, posdiv: 1, margin: 10625, power: 749",
+        "[07*] freq: 1085000, volt: 73125, vsram: 75000, posdiv: 1, margin: 10625, power: 734",
+        "[08*] freq: 1070000, volt: 72500, vsram: 75000, posdiv: 1, margin: 10625, power: 710",
+        "[09*] freq: 1055000, volt: 72500, vsram: 75000, posdiv: 1, margin: 10000, power: 696",
+        "[10*] freq: 1040000, volt: 71875, vsram: 75000, posdiv: 1, margin: 10000, power: 673",
+        "[11*] freq: 1025000, volt: 71250, vsram: 75000, posdiv: 1, margin: 10000, power: 650",
+        "[12*] freq: 1010000, volt: 70625, vsram: 75000, posdiv: 1, margin: 10000, power: 637",
+        "[13*] freq: 995000, volt: 70625, vsram: 75000, posdiv: 1, margin: 9375, power: 630",
+        "[14*] freq: 980000, volt: 70000, vsram: 75000, posdiv: 1, margin: 9375, power: 609",
+        "[15*] freq: 965000, volt: 69375, vsram: 75000, posdiv: 1, margin: 9375, power: 581",
+        "[16*] freq: 950000, volt: 68750, vsram: 75000, posdiv: 2, margin: 9375, power: 561",
+        "[17*] freq: 935000, volt: 68750, vsram: 75000, posdiv: 2, margin: 8750, power: 555",
+        "[18*] freq: 920000, volt: 68125, vsram: 75000, posdiv: 2, margin: 9375, power: 542",
+        "[19*] freq: 905000, volt: 67500, vsram: 75000, posdiv: 2, margin: 9375, power: 522",
+        "[20*] freq: 890000, volt: 66875, vsram: 75000, posdiv: 2, margin: 9375, power: 498",
+        "[21*] freq: 872000, volt: 66250, vsram: 75000, posdiv: 2, margin: 9375, power: 480",
+        "[22*] freq: 854000, volt: 66250, vsram: 75000, posdiv: 2, margin: 8750, power: 469",
+        "[23*] freq: 836000, volt: 65625, vsram: 75000, posdiv: 2, margin: 8125, power: 463",
+        "[24*] freq: 818000, volt: 65000, vsram: 75000, posdiv: 2, margin: 8125, power: 439",
+        "[25*] freq: 800000, volt: 64375, vsram: 75000, posdiv: 2, margin: 8125, power: 417",
+        "[26*] freq: 782000, volt: 63750, vsram: 75000, posdiv: 2, margin: 8125, power: 412",
+        "[27*] freq: 764000, volt: 63125, vsram: 75000, posdiv: 2, margin: 8125, power: 391",
+        "[28*] freq: 746000, volt: 62500, vsram: 75000, posdiv: 2, margin: 8125, power: 370",
+        "[29*] freq: 728000, volt: 61875, vsram: 75000, posdiv: 2, margin: 8125, power: 356",
+        "[30*] freq: 710000, volt: 61250, vsram: 75000, posdiv: 2, margin: 8125, power: 346",
+        "[31*] freq: 692000, volt: 60625, vsram: 75000, posdiv: 2, margin: 8125, power: 327",
+        "[32*] freq: 675000, volt: 60000, vsram: 75000, posdiv: 2, margin: 7500, power: 314",
+        "[33*] freq: 655000, volt: 60000, vsram: 75000, posdiv: 2, margin: 6875, power: 304",
+        "[34*] freq: 635000, volt: 60000, vsram: 75000, posdiv: 2, margin: 6250, power: 294",
+        "[35*] freq: 615000, volt: 60000, vsram: 75000, posdiv: 2, margin: 5625, power: 285",
+        "[36*] freq: 596000, volt: 59375, vsram: 75000, posdiv: 2, margin: 5625, power: 272",
+        "[37*] freq: 576000, volt: 59375, vsram: 75000, posdiv: 2, margin: 5000, power: 262",
+        "[38*] freq: 556000, volt: 59375, vsram: 75000, posdiv: 2, margin: 4375, power: 253",
+        "[39*] freq: 537000, volt: 59375, vsram: 75000, posdiv: 2, margin: 3750, power: 244",
+        "[40*] freq: 517000, volt: 58750, vsram: 75000, posdiv: 2, margin: 3750, power: 239",
+        "[41*] freq: 497000, volt: 58750, vsram: 75000, posdiv: 2, margin: 3125, power: 230",
+        "[42*] freq: 478000, volt: 58750, vsram: 75000, posdiv: 2, margin: 2500, power: 221",
+        "[43*] freq: 458000, volt: 58750, vsram: 75000, posdiv: 3, margin: 1875, power: 211",
+        "[44*] freq: 438000, volt: 58125, vsram: 75000, posdiv: 3, margin: 1875, power: 197",
+        "[45*] freq: 419000, volt: 58125, vsram: 75000, posdiv: 3, margin: 1250, power: 192",
+        "[46*] freq: 399000, volt: 58125, vsram: 75000, posdiv: 3, margin: 625, power: 183",
+        "[47*] freq: 379000, volt: 58125, vsram: 75000, posdiv: 3, margin: 0, power: 174",
+        "[48*] freq: 360000, volt: 57500, vsram: 75000, posdiv: 3, margin: 0, power: 161"
       ]
     },
     {
@@ -250,133 +272,83 @@
       "HoldFd": true
     },
     {
-      "Name": "GPUBlockBoost",
-      "Path": "/sys/kernel/ged/hal/gpu_boost_level",
-      "Values": ["101", "50", "0", "-1"],
-      "ResetOnInit": true,
-      "DefaultIndex": 2
-    },
-    {
-      "Name": "BGUclampMin",
-      "Path": "/dev/cpuctl/background/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "FGUclampMin",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "TAUclampMin",
+      "Name": "UclampTAMin",
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CAMUClampBoost",
-      "Path": "/dev/cpuctl/camera-daemon/cpu.uclamp.min",
-      "Values": ["100", "75", "50", "25", "0"],
+      "Values": [
+        "0",
+        "100"
+      ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "RestrictedCpuset",
       "Path": "/dev/cpuset/restricted/cpus",
-      "Values": ["0-3", "0-7"],
+      "Values": [
+        "0-3",
+        "0-7"
+      ],
       "ResetOnInit": false
-    },
-    {
-      "Name": "PowerHALMainState",
-      "Path": "vendor.powerhal.state",
-      "Values": ["SUSTAINED_PERFORMANCE", ""],
-      "Type": "Property"
-    },
-    {
-      "Name": "PowerHALAudioState",
-      "Path": "vendor.powerhal.audio",
-      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
-      "Type": "Property"
     },
     {
       "Name": "PowerHALRenderingState",
       "Path": "vendor.powerhal.rendering",
       "Values": ["EXPENSIVE_RENDERING", ""],
       "Type": "Property"
+    },
+    {
+      "Name": "Dex2oatThreads",
+      "Path": "vendor.powerhal.dalvik.vm.dex2oat-threads",
+      "Values": [
+        "6"
+      ],
+      "Type": "Property"
+    },
+    {
+      "Name": "Dex2oatCPUSet",
+      "Path": "vendor.powerhal.dalvik.vm.dex2oat-cpu-set",
+      "Values": [
+        "0,1,2,3,4,5,6"
+      ],
+      "Type": "Property"
     }
   ],
   "Actions": [
     {
-      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
-      "Node": "PowerHALAudioState",
-      "Duration": 0,
-      "Value": "AUDIO_STREAMING_LOW_LATENCY"
-    },
-    {
-      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "PowerHint": "INTERACTION",
       "Node": "CPUEfficiencyClusterMinFreq",
-      "Duration": 0,
-      "Value": "850000"
+      "Duration": 58,
+      "Value": "1400000"
     },
     {
-      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "PowerHint": "INTERACTION",
       "Node": "CPUSuperClusterMinFreq",
-      "Duration": 0,
-      "Value": "1000000"
+      "Duration": 58,
+      "Value": "1400000"
     },
     {
-      "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "PowerHALMainState",
-      "Duration": 0,
-      "Value": "SUSTAINED_PERFORMANCE"
-    },
-    {
-      "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "CPUSuperClusterMaxFreq",
-      "Duration": 0,
-      "Value": "2100000"
-    },
-    {
-      "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "CPUEfficiencyClusterMaxFreq",
-      "Duration": 0,
-      "Value": "1800000"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPUSuperClusterMaxFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
+      "PowerHint": "LAUNCH",
       "Node": "CPUSuperClusterMinFreq",
-      "Duration": 0,
+      "Duration": 1500,
       "Value": "9999999"
     },
     {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPUEfficiencyClusterMaxFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
+      "PowerHint": "LAUNCH",
       "Node": "CPUEfficiencyClusterMinFreq",
-      "Duration": 0,
+      "Duration": 1500,
       "Value": "9999999"
     },
     {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "TAUclampMin",
-      "Duration": 0,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
+      "PowerHint": "LAUNCH",
       "Node": "MemFreq",
-      "Duration": 0,
+      "Duration": 1500,
       "Value": "9999999999"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "UclampTAMin",
+      "Duration": 1500,
+      "Value": "100"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
@@ -385,100 +357,40 @@
       "Value": "0"
     },
     {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUEfficiencyClusterMinFreq",
-      "Duration": 1000,
-      "Value": "1100000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUSuperClusterMinFreq",
-      "Duration": 1000,
-      "Value": "1100000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUEfficiencyClusterMaxFreq",
-      "Duration": 1000,
-      "Value": "1650000"
-    },
-    {
-      "PowerHint": "INTERACTION",
+      "PowerHint": "FIXED_PERFORMANCE",
       "Node": "CPUSuperClusterMaxFreq",
-      "Duration": 1000,
-      "Value": "2800000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "FGUclampMin",
-      "Duration": 1000,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "TAUclampMin",
-      "Duration": 1000,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "GpuPwrLevel",
-      "Duration": 1000,
-      "Value": "7"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUSuperClusterMaxFreq",
-      "Duration": 3000,
-      "Value": "2200000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUSuperClusterMinFreq",
-      "Duration": 3000,
-      "Value": "2200000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUEfficiencyClusterMaxFreq",
-      "Duration": 3000,
-      "Value": "2000000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUEfficiencyClusterMinFreq",
-      "Duration": 3000,
-      "Value": "2000000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "MemFreq",
-      "Duration": 4000,
-      "Value": "9999999999"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "TAUclampMin",
-      "Duration": 3000,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUBlockBoost",
-      "Duration": 5000,
-      "Value": "101"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GpuPwrLevel",
       "Duration": 0,
-      "Value": "0"
+      "Value": "9999999"
     },
     {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "CAMUClampBoost",
-      "Duration": 1000,
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUSuperClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUEfficiencyClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUEfficiencyClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "UclampTAMin",
+      "Duration": 0,
       "Value": "100"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "MemFreq",
+      "Duration": 0,
+      "Value": "9999999999"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -493,58 +405,10 @@
       "Value": "0"
     },
     {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUBlockBoost",
-      "Duration": 0,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CPUSuperClusterMinFreq",
-      "Duration": 0,
-      "Value": "2100000"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "CPUEfficiencyClusterMinFreq",
-      "Duration": 0,
-       "Value": "9999999"
-    },
-    {
       "PowerHint": "ML_ACC",
       "Node": "PMQoSCpuDmaLatency",
-      "Duration": 2000,
+      "Duration": 1500,
       "Value": "51"
-    },
-    {
-      "PowerHint": "FP_BOOST",
-      "Node": "GpuPwrLevel",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "FP_BOOST",
-      "Node": "CPUSuperClusterMinFreq",
-      "Duration": 4000,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FP_BOOST",
-      "Node": "CPUEfficiencyClusterMinFreq",
-      "Duration": 4000,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FP_BOOST",
-      "Node": "MemFreq",
-      "Duration": 4000,
-      "Value": "9999999999"
-    },
-    {
-      "PowerHint": "FP_BOOST",
-      "Node": "TAUclampMin",
-      "Duration": 4000,
-      "Value": "100"
     },
     {
       "PowerHint": "DEVICE_IDLE",
