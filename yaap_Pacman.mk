@@ -9,6 +9,9 @@ $(call inherit-product, device/nothing/Aerodactyl/device-Pacman.mk)
 # Inherit from the YAAP configuration.
 $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
+# YAAP Flags
+TARGET_ENABLE_BLUR := false
+
 PRODUCT_BRAND := Nothing
 PRODUCT_DEVICE := Pacman
 PRODUCT_MANUFACTURER := Nothing
