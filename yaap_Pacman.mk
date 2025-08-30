@@ -11,6 +11,7 @@ $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 # YAAP Flags
 TARGET_ENABLE_BLUR := false
+PERF_ANIM_OVERRIDE := true
 
 PRODUCT_BRAND := Nothing
 PRODUCT_DEVICE := Pacman
