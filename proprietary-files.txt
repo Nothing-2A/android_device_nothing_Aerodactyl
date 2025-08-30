@@ -1010,8 +1010,6 @@ vendor/lib64/libthha.so
 # Media (Codec2)
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
-vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/mtk_platform_codecs_config.xml
 vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
