@@ -76,10 +76,10 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
 
     if (callback != nullptr) {
         std::thread([=, this] {
-            usleep((timeout + 30) * 1000);
+            usleep((timeout + 15) * 1000);
             playEffect(effect);
             if (effect == Effect::DOUBLE_CLICK) {
-                usleep((timeout + 20) * 1000);
+                usleep((timeout + 10) * 1000);
                 playEffect(effect);
             }
 
