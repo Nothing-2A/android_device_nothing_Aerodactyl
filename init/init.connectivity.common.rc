@@ -28,9 +28,6 @@ on post-fs-data
 # Connectivity related device nodes & configuration (end)
 #
 
-
-on boot
-
 #
 # Connectivity related services (Begin)
 #
