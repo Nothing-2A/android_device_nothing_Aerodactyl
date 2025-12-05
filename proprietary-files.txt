@@ -1015,10 +1015,8 @@ vendor/lib64/hw/gps.default.so
 vendor/lib64/hw/mtkflp.default.so
 vendor/lib64/hw/mtkgeofence.default.so
 vendor/lib64/mt6886/libDR.so;SYMLINK=vendor/lib64/libDR.so
-vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
-vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/vendor.mediatek.hardware.gnss.batching-V1-ndk.so
 
 # Graphics (ARM mali)
@@ -1195,9 +1193,6 @@ vendor/lib64/libapu_mdw_batch.so
 vendor/lib64/libapusys.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
-vendor/lib64/libasn1c_core.so
-vendor/lib64/libasn1c_mapi.so
-vendor/lib64/libasn1c_mdmi.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
 vendor/lib64/libneuroeara.so
@@ -1210,9 +1205,6 @@ vendor/lib64/libnpagent.so
 vendor/lib64/libnpagent_server.so
 vendor/lib64/libpixelflinger.so
 vendor/lib64/libtflite_mtk.so
-vendor/lib64/libtranslator_mapi_v3.0.so
-vendor/lib64/libtranslator_mdmi_v2.8.2.so
-vendor/lib64/libtranslator_utils.so
 vendor/lib64/libvpu.so
 vendor/lib64/vendor.mediatek.hardware.apuware.apusys-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
@@ -1332,7 +1324,6 @@ vendor/lib64/libtrm.so
 vendor/lib64/libvia-ril.so
 vendor/lib64/libviamipc-ril.so
 vendor/lib64/libwpfa.so
-vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.assist-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.atci-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.cap-V1-ndk.so
