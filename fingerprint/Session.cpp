@@ -28,6 +28,27 @@ void onClientDeath(void* cookie) {
     }
 }
 
+void setDisplayDither(bool enable) {
+    // TODO check if displayID is fine to be set as 0, otherwise use the one from the displayconfig xml
+    int8_t displayId = 0;
+
+    DitherParam param;
+    param.relay = true; // Set to true to relay config to hardware (if that even matters ?)
+
+    // Mode 1 = lfsr (Dithering ON)
+    // Mode 3 = round (Dithering OFF/Truncate)
+    param.mode = enable ? DitherMode::lfsr : DitherMode::round;
+
+    // call the PQ function for dither
+    auto status = mPictureQuality->setDispDitherParam(displayId, param);
+
+    if (status.isOk()) {
+        ALOGI("Successfully set dithering to: %d", enable);
+    } else {
+        ALOGE("Failed to set dithering: %d", status.getServiceSpecificError());
+    }
+}
+
 Session::Session(fingerprint_device_t* device, int32_t userId,
             std::shared_ptr<ISessionCallback> cb, LockoutTracker lockoutTracker)
             : mDevice(device), mLockoutTracker(lockoutTracker), mUserId(userId), mCb(cb) {

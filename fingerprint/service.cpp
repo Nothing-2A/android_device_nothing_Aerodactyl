@@ -11,9 +11,21 @@
 #include <android-base/logging.h>
 
 using ::aidl::android::hardware::biometrics::fingerprint::Fingerprint;
+#if 0
+using ::aidl::vendor::mediatek::hardware::pq_aidl::IPictureQuality_AIDL;
+#endif
 
 int main() {
     ABinderProcess_setThreadPoolMaxThreadCount(0);
+
+#if 0
+    std::shared_ptr<IPictureQuality_AIDL> pqService = ndk::SharedRefBase::make<IPictureQuality_AIDL>();
+
+    const std::string pqInstance = std::string() + IPictureQuality_AIDL::descriptor + "/default";
+    binder_status_t pqStatus = AServiceManager_addService(pqService->asBinder().get(), pqInstance.c_str());
+    CHECK(pqStatus == STATUS_OK);
+#endif
+
     std::shared_ptr<Fingerprint> fingerprint = ndk::SharedRefBase::make<Fingerprint>();
 
     const std::string instance = std::string() + Fingerprint::descriptor + "/default";
