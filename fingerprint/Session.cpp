@@ -30,28 +30,23 @@ void onClientDeath(void* cookie) {
 
 void setDisplayDither(bool enable) {
     // TODO check if displayID is fine to be set as 0, otherwise use the one from the displayconfig xml
-    int8_t displayId = 0;
+    int8_t displayId = 4627039422300187648;
 
     DitherParam param;
-    param.relay = true; // Set to true to relay config to hardware (if that even matters ?)
+    param.relay = true; // Check if it's needed
 
     // Mode 1 = lfsr (Dithering ON)
     // Mode 3 = round (Dithering OFF/Truncate)
     param.mode = enable ? DitherMode::lfsr : DitherMode::round;
 
-    // call the PQ function for dither
-    auto status = mPictureQuality->setDispDitherParam(displayId, param);
-
-    if (status.isOk()) {
-        ALOGI("Successfully set dithering to: %d", enable);
-    } else {
-        ALOGE("Failed to set dithering: %d", status.getServiceSpecificError());
-    }
+    // Call the PQ function for dither
+    mPictureQuality->setDispDitherParam(displayId, param);
 }
 
 Session::Session(fingerprint_device_t* device, int32_t userId,
-            std::shared_ptr<ISessionCallback> cb, LockoutTracker lockoutTracker)
-            : mDevice(device), mLockoutTracker(lockoutTracker), mUserId(userId), mCb(cb) {
+            std::shared_ptr<ISessionCallback> cb, LockoutTracker lockoutTracker,
+            std::shared_ptr<IPictureQuality_AIDL> pictureQuality)
+            : mDevice(device), mLockoutTracker(lockoutTracker), mUserId(userId), mCb(cb), mPictureQuality(pictureQuality) {
     mDeathRecipient = AIBinder_DeathRecipient_new(onClientDeath);
 
     std::string path = ::android::base::StringPrintf("/data/vendor_de/%d/fpdata/", mUserId);

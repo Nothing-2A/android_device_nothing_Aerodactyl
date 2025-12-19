@@ -37,7 +37,9 @@ constexpr char SW_VERSION[] = "vendor/version/revision";
 
 static Fingerprint* sInstance;
 
-Fingerprint::Fingerprint() {
+Fingerprint::Fingerprint(std::shared_ptr<IPictureQuality_AIDL> pictureQuality)
+    : mPictureQuality(std::move(pictureQuality))
+{
     sInstance = this; // keep track of the most recent instance
 
     if (mDevice) {
@@ -172,7 +174,7 @@ ndk::ScopedAStatus Fingerprint::createSession(int32_t /*sensorId*/, int32_t user
                                               std::shared_ptr<ISession>* out) {
     CHECK(mSession == nullptr || mSession->isClosed()) << "Open session already exists!";
 
-    mSession = SharedRefBase::make<Session>(mDevice, userId, cb, mLockoutTracker);
+    mSession = SharedRefBase::make<Session>(mDevice, userId, cb, mLockoutTracker, mPictureQuality);
     *out = mSession;
 
     mSession->linkToDeath(cb->asBinder().get());
