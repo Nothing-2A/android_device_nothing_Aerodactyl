@@ -30,7 +30,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 WITH_GMS_COMMS_SUITE := true 
 TARGET_INCLUDE_STOCK_ARCORE := true 
 TARGET_INCLUDE_PIXEL_LAUNCHER := true 
-
 EUCLID_GAPPS := true
 
 # Google Call recorder and ARcore 
@@ -46,17 +45,17 @@ TARGET_BUILD_BCR := true
 # DotGallery 
 TARGET_BUILD_DOTGALLERY := false 
 
-#UDFPS
+# UDFPS
+TARGET_HAS_UDFPS := true
 EXTRA_UDFPS_ANIMATIONS := true
 
 # Extra Packages (Optional)
 TARGET_PREBUILT_LAWNICONS := true 
 TARGET_BUILD_DOTGALLERY := true 
 
-# Maintainer Name (Underscore becomes space in the UI)
-EUCLID_MAINTAINER := Shravan
-
 # Device Specifications (Underscore becomes space in the UI)
 EUCLID_DEVICE := Nothing_Phone_2a
 EUCLID_PROCESSOR := Mediatek_Dimensity_7200_Pro
 
+# Maintainer Name (Underscore becomes space in the UI)
+EUCLID_MAINTAINER := Shravan
