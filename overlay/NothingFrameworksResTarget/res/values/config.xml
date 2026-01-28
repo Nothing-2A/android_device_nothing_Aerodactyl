@@ -447,13 +447,13 @@
          If a non-zero value is set for config_defaultPeakRefreshRate, then
          config_defaultRefreshRate may be set to 0, in which case the value set for
          config_defaultPeakRefreshRate will act as the default frame rate. -->
-    <integer name="config_defaultRefreshRate">121</integer>
+    <integer name="config_defaultRefreshRate">120</integer>
 
     <!-- The default peak refresh rate for a given device. Change this value if you want to prevent
          the framework from using higher refresh rates, even if display modes with higher refresh
          rates are available from hardware composer. Only has an effect if the value is
          non-zero. -->
-    <integer name="config_defaultPeakRefreshRate">121</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
 
     <!-- When each intermediate UDFPS enroll stage ends, as a fraction of total progress. -->
     <string-array name="config_udfps_enroll_stage_thresholds" translatable="false">
