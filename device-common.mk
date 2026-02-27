@@ -254,16 +254,15 @@ PRODUCT_BOOT_JARS += \
     nt-fwk.Aerodactyl
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 PRODUCT_PACKAGES += \
     NothingCarrierConfigResTarget \
     NothingFrameworksResTarget \
     NothingLauncher3ResTarget \
-    NothingNetworkStackResTarget \
     NothingNfcResTarget \
     NothingSettingsResTarget \
-    NothingSystemUIResTarget \
-    NothingTelephonyResTarget \
-    NothingWifiResTarget
+    NothingSystemUIResTarget
 
 PRODUCT_PACKAGES += \
     NcmTetheringOverlay
