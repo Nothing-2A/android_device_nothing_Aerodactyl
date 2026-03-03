@@ -409,3 +409,10 @@ PRODUCT_COPY_FILES += \
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/nothing/Aerodactyl/Aerodactyl-vendor.mk)
+
+# Telephony Compatibility
+PRODUCT_PACKAGES += \
+    telephony-common-stub
+
+PRODUCT_BOOT_JARS += \
+    telephony-common-stub
