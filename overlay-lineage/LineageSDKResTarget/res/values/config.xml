@@ -19,4 +19,10 @@
          value. If this is the case, set this config to true to let the toggle provider always set
          charging enabled status regardless of the current status. -->
     <bool name="config_chargingControlToggleSetAlways">true</bool>
+
+    <!-- For a device that cannot bypass battery when charging stops (that is, the battery current
+         is 0mA when charging stops), the battery will gradually discharge. So we need to make it
+         recharge when the battery level is lower than a threshold. Set this so that the device
+         will be charged between (limit - val) and limit. -->
+    <integer name="config_chargingControlBatteryRechargeMargin">1</integer>
 </resources>
