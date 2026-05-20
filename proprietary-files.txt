@@ -710,7 +710,6 @@ vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Display - AAL
 vendor/lib64/mt6886/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
-vendor/lib64/libaal_key.so
 vendor/lib64/libaal_sec.so
 
 # Display - Picture Quality

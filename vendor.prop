@@ -234,6 +234,8 @@ ro.vendor.nothing.feature.diff.device.Pacman=0x56400200304400040128d3493f4d00250
 ro.vendor.nothing.feature.diff.device.PacmanPro=0x56400000304400040128db493f4d00250c42080L
 
 # Picture Quality
+persist.vendor.sys.mtkaal.function=0
+persist.vendor.sys.pq.disp.aal.bypass=1
 persist.vendor.sys.pq.disp.ccorr.silky.brightness=0
 persist.vendor.sys.pq.disp.gamma.silky.brightness=0
 persist.vendor.sys.pq.disp_gamma_silky_brightness_by_hwc=0
