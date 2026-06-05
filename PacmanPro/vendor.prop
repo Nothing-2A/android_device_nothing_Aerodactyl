@@ -1,2 +1,5 @@
 # Bluetooth
 bluetooth.device.default_name=Nothing Phone (2a) Plus
+
+# Power
+vendor.powerhal.config=powerhint-Pro.json
