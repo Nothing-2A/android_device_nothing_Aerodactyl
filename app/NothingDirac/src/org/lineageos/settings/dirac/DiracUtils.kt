@@ -63,6 +63,7 @@ class DiracUtils {
             mDiracSound?.let {
                 try {
                     it.setEnabled(if (enable) 1 else 0)
+                    it.enabled = enable
                     Log.i(TAG, "HAL accepted setEnabled")
                 } catch (e: Exception) {
                     Log.e(TAG, "HAL rejected setEnabled")

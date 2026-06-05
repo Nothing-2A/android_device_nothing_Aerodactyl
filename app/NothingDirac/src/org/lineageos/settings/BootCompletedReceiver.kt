@@ -8,6 +8,7 @@ package org.lineageos.settings
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.preference.PreferenceManager
 import android.util.Log
 
 import org.lineageos.settings.dirac.DiracUtils
@@ -20,6 +21,17 @@ class BootCompletedReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
         Log.d(TAG, "Received boot completed intent")
+
+        val sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context)
+        if (!sharedPrefs.contains("dirac_enable")) {
+            sharedPrefs.edit()
+                .putBoolean("dirac_enable", true)
+                .putString("dirac_scenario_pref", "MUSIC")
+                .putString("dirac_preset_pref", "0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0")
+                .putInt("dirac_volume_pref", 0)
+                .apply()
+        }
+
         DiracUtils.initialize(context)
     }
 }
