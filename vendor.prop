@@ -145,6 +145,7 @@ persist.vendor.connsys.fm_chipid=mt6635
 ro.vendor.mtk_log_hide_gps=0
 
 # Graphics
+debug.hwui.initialize_gl_always=1
 graphics.gpu.profiler.support=true
 ro.hardware.egl=mali
 ro.hardware.vulkan=mali
