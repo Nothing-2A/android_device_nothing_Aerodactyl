@@ -235,7 +235,7 @@ PRODUCT_PACKAGES += \
     Tag
 
 PRODUCT_PACKAGES += \
-    NothingFelica
+    NothingFelicaDisabler
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
@@ -248,11 +248,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JPN/android.hardware.se.omapi.ese.xml
 
 # NTF
-PRODUCT_PACKAGES += \
-    nt-fwk.Aerodactyl
-
-PRODUCT_BOOT_JARS += \
-    nt-fwk.Aerodactyl
+$(call inherit-product, hardware/nothing/nt-fwk/nt-fwk.mk)
 
 # Overlays
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
@@ -270,6 +266,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     LineageApertureResTarget \
+    LineageDozeResTarget \
     LineageSDKResTarget \
     LineageSettingsProviderResTarget \
     LineageSettingsResTarget \
@@ -339,6 +336,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.boot_security_patch=$(BOOT_SECURITY_PATCH)
 
 # Sensors
+$(call soong_config_set,nothing_sensors,tp_udfps_path,/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_fod_pressed)
+$(call soong_config_set,nothing_sensors,tp_single_tap_path,/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_single_tap_pressed)
+
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
     android.hardware.sensors@2.0-subhal-impl-1.0 \
@@ -363,7 +363,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
-    hardware/mediatek/wlan/wifi_hal
+    hardware/mediatek/wlan/wifi_hal \
+    hardware/nothing
 
 # Task Profiles
 PRODUCT_COPY_FILES += \
