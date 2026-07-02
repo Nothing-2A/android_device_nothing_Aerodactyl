@@ -6,5 +6,5 @@
 runtime_resource_overlay {
     name: "NothingCarrierConfigResTarget",
     product_specific: true,
-    aaptflags: ["--keep-raw-values"]
+    aaptflags: ["--keep-raw-values"],
 }
