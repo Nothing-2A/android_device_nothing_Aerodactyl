@@ -327,9 +327,6 @@ BOOT_SECURITY_PATCH := 2025-10-05
 INIT_BOOT_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 VENDOR_SECURITY_PATCH := 2026-03-05
 
-PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.boot_security_patch=$(BOOT_SECURITY_PATCH)
-
 # Sensors
 $(call soong_config_set,nothing_sensors,tp_udfps_path,/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_fod_pressed)
 $(call soong_config_set,nothing_sensors,tp_single_tap_path,/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_single_tap_pressed)
