@@ -33,6 +33,3 @@ allow glyph_app system_app_data_file:{
 } create_file_perms;
 
 allow glyph_app sysfs_leds:dir search;
-
-allow glyph_app mnt_vendor_file:dir r_dir_perms;
-allow glyph_app mnt_vendor_file:file rw_file_perms;
