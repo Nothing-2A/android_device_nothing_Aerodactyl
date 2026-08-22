@@ -2,107 +2,6 @@
 # are from Nothing Phone (2a) (Pacman-B4.0-260609-1925).
 
 # Audio
-vendor/etc/AudioLog_dynamic.xml
-vendor/lib64/hw/android.hardware.audio@7.1-impl-mediatek.so
-vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6886.so
-vendor/lib64/hw/sound_trigger.primary.default.so
-vendor/lib64/soundfx/libspatializer.so
-vendor/lib64/libMtkSpeechEnh.so
-vendor/lib64/lib_iir.so
-vendor/lib64/lib_lvacfs.so
-vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v33.so;FIX_SONAME
-vendor/lib64/libaudio_param_parser-vnd.so
-vendor/lib64/libaudiocompensationfilter_vendor.so
-vendor/lib64/libaudiocompensationfilterc.so
-vendor/lib64/libaudiocomponentengine_vendor.so
-vendor/lib64/libaudiocomponentenginec.so
-vendor/lib64/libaudiocustparam_vendor.so
-vendor/lib64/libaudiodcrflt_vendor.so
-vendor/lib64/libaudiofmtconv.so
-vendor/lib64/libaudioloudc.so
-vendor/lib64/libaudioprimarydevicehalifclient.so
-vendor/lib64/libaudiosmartpamtk.so
-vendor/lib64/libaudiotoolkit_vendor.so
-vendor/lib64/libaurisysdemo.so
-vendor/lib64/libbessound_hd_mtk_vendor.so
-vendor/lib64/libblisrc32_vendor.so
-vendor/lib64/libbwc.so
-vendor/lib64/libcvsd_mtk.so
-vendor/lib64/libgoodixspeech.so
-vendor/lib64/liblvacfs_wrapper.so
-vendor/lib64/libmsbc_mtk.so
-vendor/lib64/libmtklimiter_vendor.so
-vendor/lib64/libmtkshifter_vendor.so
-vendor/lib64/libmtkspparser.so
-vendor/lib64/libnxp_extamp_intf.so
-vendor/lib64/libnxpsmartpaparser.so
-vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
-vendor/lib64/libspeechparser_vendor.so
-vendor/lib64/libvow_ap_test_aa.so
-vendor/lib64/libvow_ap_test_dd.so
-vendor/lib64/libvow_ap_test_ha.so
-vendor/lib64/libvow_ap_test_hh.so
-vendor/lib64/libvow_ap_test_nn.so
-vendor/lib64/libvow_ap_test_trip_aa.so
-vendor/lib64/libvow_ap_test_trip_dd.so
-vendor/lib64/libvow_ap_test_trip_ha.so
-vendor/lib64/libvow_ap_test_trip_hh.so
-vendor/lib64/libvow_ap_test_trip_nn.so
-vendor/lib64/libvow_comp_test.so
-vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
-
-# Audio (Aurisys)
-vendor/etc/aurisys_config.xml
-vendor/etc/aurisys_config_hifi3.xml
-vendor/etc/aurisys_config_rv.xml
-
-# Audio (Device)
-vendor/etc/audio_device.xml
-
-# Audio (Dirac)
-vendor/etc/dirac/dirac_resource.dar
-vendor/etc/dirac/interface.json
-vendor/lib64/soundfx/libdiraceffect_NT.so
-vendor/lib64/libdirac.so
-
-# Audio (Hotword enrollment)
-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
-system_ext/framework/com.android.hotwordenrollment.common.util.jar
-
-# Audio (LVACFS)
-vendor/etc/lvacfs_params/1mic/LVACFS_Calibration_1mic.dat
-vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_standard.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_voicefocus.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_wideband.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt
-vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt
-vendor/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat
-vendor/etc/lvacfs_params/2mic/LVACFS_Configuration.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_standard.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_voicefocus.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_wideband.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt
-vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt
-vendor/etc/lvacfs_params/2mic/audiozoom_2.txt
-
-# Audio (Parameters)
 vendor/etc/audio_param/AudioParamOptions_mgvi.xml
 vendor/etc/audio_param/AudioParamOptions_vext.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
@@ -222,8 +121,6 @@ vendor/etc/audio_param/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/Volume_AudioParam.xml
 vendor/etc/audio_param/Volume_ParamUnitDesc.xml
-
-# Audio (Goodix)
 vendor/etc/goodix/ve15/Phone_bt_bt.bin
 vendor/etc/goodix/ve15/Phone_hsmic_hs.bin
 vendor/etc/goodix/ve15/Phone_mic_hp.bin
@@ -244,26 +141,107 @@ vendor/etc/goodix/ve15/VoIP_mic_spk.bin
 vendor/etc/goodix/ve15/VoIP_mic_spk_game.bin
 vendor/etc/goodix/ve15/VoIP_mic_spk_voicefocus.bin
 vendor/etc/goodix/ve15/VoIP_mic_spk_wideband.bin
-
-# Audio (SmartPA parameters)
+vendor/etc/lvacfs_params/1mic/LVACFS_Calibration_1mic.dat
+vendor/etc/lvacfs_params/1mic/LVACFS_Configuration.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID1_MIC_standard.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID2_MIC_voicefocus.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID3_MIC_wideband.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt
+vendor/etc/lvacfs_params/1mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt
+vendor/etc/lvacfs_params/2mic/LVACFS_Calibration360_2mic.dat
+vendor/etc/lvacfs_params/2mic/LVACFS_Configuration.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID10_He_USB_Digital_48K.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID11_He_USB_Digital_16K.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID12_He_BT_16K.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID1_MIC_standard.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID2_MIC_voicefocus.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID3_MIC_wideband.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID4_MIC_Cam.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID5_MIC_Normal.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID6_MIC_App.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID7_MIC_He.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID8_MIC_He_App.txt
+vendor/etc/lvacfs_params/2mic/LVIMFS_Parameter_xxxx_ID9_He_Unprocess.txt
+vendor/etc/lvacfs_params/2mic/audiozoom_2.txt
 vendor/etc/smartpa_param/aw882xx_acf.bin
 vendor/etc/smartpa_param/tfa98xx_device.bin
 vendor/etc/smartpa_param/tfa98xx_factory.bin
 vendor/etc/smartpa_param/tfa98xx_music.bin
 vendor/etc/smartpa_param/tfa98xx_ringtone.bin
 vendor/etc/smartpa_param/tfa98xx_voice.bin
+vendor/etc/AudioLog_dynamic.xml
+vendor/etc/audio_device.xml
+vendor/etc/aurisys_config.xml
+vendor/etc/aurisys_config_hifi3.xml
+vendor/etc/aurisys_config_rv.xml
+vendor/lib64/hw/android.hardware.audio@7.1-impl-mediatek.so
+vendor/lib64/hw/audio.primary.mediatek.so;SYMLINK=vendor/lib64/hw/audio.primary.mt6886.so
+vendor/lib64/hw/sound_trigger.primary.default.so
+vendor/lib64/soundfx/libspatializer.so
+vendor/lib64/libMtkSpeechEnh.so
+vendor/lib64/lib_iir.so
+vendor/lib64/lib_lvacfs.so
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v33.so;FIX_SONAME
+vendor/lib64/libaudio_param_parser-vnd.so
+vendor/lib64/libaudiocompensationfilter_vendor.so
+vendor/lib64/libaudiocompensationfilterc.so
+vendor/lib64/libaudiocomponentengine_vendor.so
+vendor/lib64/libaudiocomponentenginec.so
+vendor/lib64/libaudiocustparam_vendor.so
+vendor/lib64/libaudiodcrflt_vendor.so
+vendor/lib64/libaudiofmtconv.so
+vendor/lib64/libaudioloudc.so
+vendor/lib64/libaudioprimarydevicehalifclient.so
+vendor/lib64/libaudiosmartpamtk.so
+vendor/lib64/libaudiotoolkit_vendor.so
+vendor/lib64/libaurisysdemo.so
+vendor/lib64/libbessound_hd_mtk_vendor.so
+vendor/lib64/libblisrc32_vendor.so
+vendor/lib64/libbwc.so
+vendor/lib64/libcvsd_mtk.so
+vendor/lib64/libgoodixspeech.so
+vendor/lib64/liblvacfs_wrapper.so
+vendor/lib64/libmsbc_mtk.so
+vendor/lib64/libmtklimiter_vendor.so
+vendor/lib64/libmtkshifter_vendor.so
+vendor/lib64/libmtkspparser.so
+vendor/lib64/libnxp_extamp_intf.so
+vendor/lib64/libnxpsmartpaparser.so
+vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
+vendor/lib64/libspeechparser_vendor.so
+vendor/lib64/libvow_ap_test_aa.so
+vendor/lib64/libvow_ap_test_dd.so
+vendor/lib64/libvow_ap_test_ha.so
+vendor/lib64/libvow_ap_test_hh.so
+vendor/lib64/libvow_ap_test_nn.so
+vendor/lib64/libvow_ap_test_trip_aa.so
+vendor/lib64/libvow_ap_test_trip_dd.so
+vendor/lib64/libvow_ap_test_trip_ha.so
+vendor/lib64/libvow_ap_test_trip_hh.so
+vendor/lib64/libvow_ap_test_trip_nn.so
+vendor/lib64/libvow_comp_test.so
+vendor/lib64/vendor.mediatek.hardware.audio@8.1.so
 
 # Audio firmware
 vendor/firmware/tfa98xx.cnt
 
 # Bluetooth
 vendor/etc/init/init.bt_drv.rc
-vendor/firmware/BT_FW.cfg
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
 
-# Bluetooth (A2DP)
+# Bluetooth firmware
+vendor/firmware/BT_FW.cfg
+
+# Bluetooth - A2DP
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
@@ -658,7 +636,7 @@ vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/firmware/lib3a.ccu
 vendor/firmware/lib3a.ccu_dummy
 
-# Camera SQLiteModule database
+# Camera - SQLiteModule database
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/mt6886/ParameterDB_ae.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/ae/ParameterDB_ae.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/mt6886/ParameterDB_af.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/af/ParameterDB_af.db;MAKE_COPY_RULE_ONLY
 vendor/bin/crossbuild/DataSet/SQLiteModule/db/awb/mt6886/ParameterDB_awb.db;SYMLINK=vendor/bin/crossbuild/DataSet/SQLiteModule/db/awb/ParameterDB_awb.db;MAKE_COPY_RULE_ONLY
@@ -694,7 +672,15 @@ vendor/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db;MAKE_COPY_RULE_ONLY
 vendor/bin/conninfra_loader
 vendor/etc/init/init.connfem.rc
 vendor/etc/init/init.conninfra.rc
+
+# Connectivity firmware
 vendor/firmware/conninfra.cfg
+
+# Dirac
+vendor/etc/dirac/dirac_resource.dar
+vendor/etc/dirac/interface.json
+vendor/lib64/soundfx/libdiraceffect_NT.so
+vendor/lib64/libdirac.so
 
 # Display
 vendor/bin/hw/android.hardware.graphics.composer@3.1-service
@@ -715,13 +701,13 @@ vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
-# Display (AAL)
+# Display - AAL
 vendor/lib64/mt6886/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6886/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 
-# Display (Picture Quality)
+# Display - Picture Quality
 vendor/bin/hw/vendor.mediatek.hardware.mmlpq@V1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq_aidl-service
 vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc
@@ -778,6 +764,8 @@ vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint.so
 
 # FMRadio
 vendor/etc/init/init.fmradio_drv.rc
+
+# FMRadio firmware
 vendor/firmware/fm_cust.cfg
 vendor/firmware/mt6635_fm_v1_coeff.bin
 vendor/firmware/mt6635_fm_v1_patch.bin
@@ -840,7 +828,7 @@ vendor/lib64/vendor.mediatek.hardware.gnss.batching-V1-ndk.so|b0bd58ee5a815d3c78
 vendor/lib64/vendor.mediatek.hardware.lbs-V1-ndk.so|2e933bde074da5891b0c8219ba8dab2efced6839
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so|b9a399777fe9b0e8781a505cf4a51ef796a835ae
 
-# Graphics (ARM mali)
+# Graphics
 vendor/bin/hw/mt6886/android.hardware.graphics.allocator@4.0-service-mediatek.mt6886;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/etc/gralloc/cam.xml
 vendor/etc/gralloc/dpu.xml
@@ -860,7 +848,7 @@ vendor/lib64/mt6886/libarm_gralloc_properties_sysprop.so;SYMLINK=vendor/lib64/li
 vendor/lib64/mt6886/libgpudataproducer.so;SYMLINK=vendor/lib64/libgpudataproducer.so
 vendor/lib64/mt6886/liblibarm_mali_config_sysprops.so;SYMLINK=vendor/lib64/liblibarm_mali_config_sysprops.so
 
-# Graphics firmware (ARM mali)
+# Graphics firmware
 vendor/firmware/mali_csffw.bin
 
 # Health
@@ -868,38 +856,11 @@ vendor/bin/fuelgauged
 vendor/etc/init/fuelgauged_init.rc
 vendor/lib64/libfgauge_gm30.so
 
-# IMS
-system_ext/bin/vtservice
-system_ext/etc/init/init.vtservice.rc
-system_ext/etc/sysconfig/com.mediatek.ims.config.xml
-system_ext/framework/mediatek-ims-base.jar;BOOT_JAR
-system_ext/framework/mediatek-ims-common.jar;BOOT_JAR
-system_ext/framework/mediatek-ims-extension-plugin.jar
-system_ext/framework/mediatek-telecom-common.jar;BOOT_JAR
-system_ext/framework/mediatek-telephony-base.jar;BOOT_JAR
-system_ext/framework/mediatek-telephony-common.jar;BOOT_JAR
-system_ext/lib64/libcomutils.so
-system_ext/lib64/libimsma.so
-system_ext/lib64/libimsma_adapt.so
-system_ext/lib64/libimsma_rtp.so
-system_ext/lib64/libimsma_socketwrapper.so
-system_ext/lib64/libmtk_vt_service.so
-system_ext/lib64/libmtk_vt_wrapper.so
-system_ext/lib64/libsignal.so
-system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME
-system_ext/lib64/libsource.so
-system_ext/lib64/libvcodec_cap.so
-system_ext/lib64/libvcodec_capenc.so
-system_ext/lib64/libvt_avsync.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
-system_ext/priv-app/ImsService/ImsService.apk
-system_ext/priv-app/MtkGbaService/MtkGbaService.apk
-system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk
-vendor/bin/hw/vtservice_hidl
-vendor/etc/init/init.vtservice_hidl.rc
-vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
+# Hotword enrollment
+product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint@2.0-service.trustonic
@@ -908,7 +869,7 @@ vendor/etc/vintf/manifest/android.hardware.security.keymint-service.trustonic.xm
 vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.trustonic.xml
 vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.trustonic.xml
 
-# Media (Codec2)
+# Media
 system/lib64/libstagefright_bufferqueue_helper.so:vendor/lib64/libstagefright_bufferqueue_helper-bp2a.so;FIX_SONAME
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
@@ -934,7 +895,7 @@ vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so
 vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v33.so;FIX_SONAME
 
-# Media (MMS)
+# Media - MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.7-service
 vendor/etc/init/vendor.mediatek.hardware.mms@1.7-service.rc
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.7-impl.so
@@ -946,25 +907,6 @@ vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
 vendor/lib64/vendor.mediatek.hardware.mms@1.7.so
-
-# MediaTek Vision Processing Unit
-vendor/lib64/libmvpu_cic_ci_compiler.so
-vendor/lib64/libmvpu_clc_cl_compiler.so
-vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
-vendor/lib64/libmvpu_clc_mvpu_elf.so
-vendor/lib64/libmvpu_clc_mvpu_utility.so
-vendor/lib64/libmvpu_clc_vpu_isa.so
-vendor/lib64/libmvpu_config.so
-vendor/lib64/libmvpu_config_data.so
-vendor/lib64/libmvpu_engine.so
-vendor/lib64/libmvpu_engine_pub.so
-vendor/lib64/libmvpu_pattern.so
-vendor/lib64/libmvpu_pattern_pub.so
-vendor/lib64/libmvpu_runtime.so
-vendor/lib64/libmvpu_runtime_builtin.so
-vendor/lib64/libmvpu_runtime_pub.so
-vendor/lib64/libmvpuop_mtk_cv.so
-vendor/lib64/libmvpuop_mtk_nn.so
 
 # Modules
 vendor/etc/init.insmod.mt6886.cfg
@@ -1046,6 +988,23 @@ vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
 vendor/lib64/libcmdl.so
 vendor/lib64/libcmdl_ndk.mtk.vndk.so
+vendor/lib64/libmvpu_cic_ci_compiler.so
+vendor/lib64/libmvpu_clc_cl_compiler.so
+vendor/lib64/libmvpu_clc_mvpu_debuginfo.so
+vendor/lib64/libmvpu_clc_mvpu_elf.so
+vendor/lib64/libmvpu_clc_mvpu_utility.so
+vendor/lib64/libmvpu_clc_vpu_isa.so
+vendor/lib64/libmvpu_config.so
+vendor/lib64/libmvpu_config_data.so
+vendor/lib64/libmvpu_engine.so
+vendor/lib64/libmvpu_engine_pub.so
+vendor/lib64/libmvpu_pattern.so
+vendor/lib64/libmvpu_pattern_pub.so
+vendor/lib64/libmvpu_runtime.so
+vendor/lib64/libmvpu_runtime_builtin.so
+vendor/lib64/libmvpu_runtime_pub.so
+vendor/lib64/libmvpuop_mtk_cv.so
+vendor/lib64/libmvpuop_mtk_nn.so
 vendor/lib64/libneuron_adapter_mc.so
 vendor/lib64/libneuron_graph_delegate.mtk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
@@ -1068,12 +1027,14 @@ vendor/etc/libnfc-hal-st.conf
 vendor/etc/libnfc-nci-felica.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libse-gto-hal.conf
+
+# NFC firmware
 vendor/etc/st21nfc_conf.txt
 vendor/etc/st54j_conf.txt
 vendor/firmware/st21nfc_fw7.bin
 vendor/firmware/st54j_fw.bin
 
-# NFC (FeliCa)
+# NFC - FeliCa
 product/app/MobileFeliCaClient/MobileFeliCaClient.apk;PRESIGNED
 product/app/MobileFeliCaMenuMainApp/MobileFeliCaMenuMainApp.apk;PRESIGNED
 product/app/MobileFeliCaSettingApp/MobileFeliCaSettingApp.apk;PRESIGNED
@@ -1182,10 +1143,53 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex.smartratswitch-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex.voice-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
+# Radio - IMS
+system_ext/bin/vtservice
+system_ext/etc/init/init.vtservice.rc
+system_ext/etc/sysconfig/com.mediatek.ims.config.xml
+system_ext/framework/mediatek-ims-base.jar;BOOT_JAR
+system_ext/framework/mediatek-ims-common.jar;BOOT_JAR
+system_ext/framework/mediatek-ims-extension-plugin.jar
+system_ext/framework/mediatek-telecom-common.jar;BOOT_JAR
+system_ext/framework/mediatek-telephony-base.jar;BOOT_JAR
+system_ext/framework/mediatek-telephony-common.jar;BOOT_JAR
+system_ext/lib64/libcomutils.so
+system_ext/lib64/libimsma.so
+system_ext/lib64/libimsma_adapt.so
+system_ext/lib64/libimsma_rtp.so
+system_ext/lib64/libimsma_socketwrapper.so
+system_ext/lib64/libmtk_vt_service.so
+system_ext/lib64/libmtk_vt_wrapper.so
+system_ext/lib64/libsignal.so
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME
+system_ext/lib64/libsource.so
+system_ext/lib64/libvcodec_cap.so
+system_ext/lib64/libvcodec_capenc.so
+system_ext/lib64/libvt_avsync.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+system_ext/priv-app/ImsService/ImsService.apk
+system_ext/priv-app/MtkGbaService/MtkGbaService.apk
+system_ext/priv-app/MtkTelephonyAssist/MtkTelephonyAssist.apk
+vendor/bin/hw/vtservice_hidl
+vendor/etc/init/init.vtservice_hidl.rc
+vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
+
 # Sensors
 vendor/bin/hw/vendor.noth.hardware.sensor.sensor_extension-service
 vendor/etc/init/vendor.noth.hardware.sensor.sensor_extension-service.rc
 vendor/etc/vintf/manifest/vendor.noth.hardware.sensor.sensor_extension-service.xml
+vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6886.so
+vendor/lib64/libhfmanager.so
+vendor/lib64/libhfmanagerwrapper.so
+vendor/lib64/libhidparser.so
+vendor/lib64/libhwm.so
+vendor/lib64/libksensor.so
+vendor/lib64/libsensor_extension.so
+vendor/lib64/vendor.noth.hardware.sensor.sensor_extension-V1-ndk.so
+
+# Sensors firmware
 vendor/firmware/aw20036_cfg_led_off.bin
 vendor/firmware/aw20036_led_all_on.bin
 vendor/firmware/aw20036_led_blue_on.bin
@@ -1195,14 +1199,6 @@ vendor/firmware/aw20036_led_red_on.bin
 vendor/firmware/gh621x_cfg.bin
 vendor/firmware/gh621x_fw.bin
 vendor/firmware/remoteproc_scp
-vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6886.so
-vendor/lib64/libhfmanager.so
-vendor/lib64/libhfmanagerwrapper.so
-vendor/lib64/libhidparser.so
-vendor/lib64/libhwm.so
-vendor/lib64/libksensor.so
-vendor/lib64/libsensor_extension.so
-vendor/lib64/vendor.noth.hardware.sensor.sensor_extension-V1-ndk.so
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
@@ -1233,7 +1229,7 @@ vendor/etc/thermal/thermal_policy_15.conf
 vendor/etc/fstb.cfg
 vendor/etc/mpe.conf
 
-# Trusted Execution Environment (TEE)
+# TEE
 vendor/bin/hw/vendor.trustonic.tee@1.1-service
 vendor/bin/mcDriverDaemon
 vendor/etc/init/tee.rc
@@ -1245,21 +1241,19 @@ vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
 
-# Vibrator (AAC RichTap)
+# Vibrator
 vendor/etc/aac_richtap.config
 vendor/lib64/libaacvibrator.so
 
-# Vibrator firmware (aw8692x vibrator)
+# Vibrator firmware
+vendor/firmware/100_Haptic.bin
+vendor/firmware/101_Haptic.bin
+vendor/firmware/haptic_config.bin
 vendor/firmware/haptic_ram.bin
 vendor/firmware/haptic_rtp.bin
 vendor/firmware/haptic_rtp_lighthouse.bin
 vendor/firmware/haptic_rtp_osc_24K_5s.bin
 vendor/firmware/haptic_rtp_silk.bin
-
-# Vibrator firmware (rt6010 vibrator)
-vendor/firmware/100_Haptic.bin
-vendor/firmware/101_Haptic.bin
-vendor/firmware/haptic_config.bin
 
 # Widevine
 vendor/bin/hw/android.hardware.drm-service.widevine
@@ -1276,5 +1270,7 @@ vendor/etc/init/wlan_assistant.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
-vendor/firmware/wifi.cfg
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
+
+# Wifi firmware
+vendor/firmware/wifi.cfg
