@@ -332,6 +332,12 @@
       "ResetOnInit": true
     },
     {
+      "Name": "PowerHALAudioState",
+      "Path": "vendor.powerhal.audio",
+      "Values": ["AUDIO_STREAMING_LOW_LATENCY", ""],
+      "Type": "Property"
+    },
+    {
       "Name": "PowerHALRenderingState",
       "Path": "vendor.powerhal.rendering",
       "Values": ["EXPENSIVE_RENDERING", ""],
@@ -462,6 +468,12 @@
       "Node": "UclampTAMin",
       "Duration": 1500,
       "Value": "100"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "PowerHALAudioState",
+      "Duration": 0,
+      "Value": "AUDIO_STREAMING_LOW_LATENCY"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
