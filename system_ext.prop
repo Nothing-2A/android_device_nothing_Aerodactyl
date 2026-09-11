@@ -4,6 +4,10 @@ ro.audio.flinger_standbytime_ms=1000
 ro.audio.usb.period_us=16000
 ro.camera.sound.forced=0
 
+# Bluetooth
+persist.bluetooth.a2dp_offload.disabled=false
+ro.bluetooth.a2dp_offload.supported=true
+
 # Camera
 ro.camera.notify_nfc=1
 
