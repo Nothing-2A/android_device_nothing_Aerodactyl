@@ -77,6 +77,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('# STNFC_FW_BIN_NAME', 'STNFC_FW_BIN_NAME')
         .regex_replace('# STNFC_FW_CONF_NAME', 'STNFC_FW_CONF_NAME')
         .regex_replace('STNFC_FW_DEBUG_ENABLED=1', 'STNFC_FW_DEBUG_ENABLED=0'),
+    'vendor/lib64/hw/android.hardware.audio@7.1-impl-mediatek.so': blob_fixup()
+        .replace_needed('android.hardware.audio@7.1-util.so', 'android.hardware.audio@7.1-util-v33.so'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
         .replace_needed('libalsautils.so', 'libalsautils-v33.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
