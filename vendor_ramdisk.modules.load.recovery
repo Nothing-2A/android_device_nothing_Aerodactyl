@@ -1,14 +1,7 @@
 bootprof.ko
-mrdump.ko
-aee_aed.ko
-aee_hangdet.ko
-monitor_hang.ko
-mkp.ko
 dbgtop-drm.ko
-irq-dbg.ko
 mtk_sync.ko
 mtk_disp_notify.ko
-mtk_printk_ctrl.ko
 log_store.ko
 nvmem_mtk-devinfo.ko
 mtk_wdt.ko
@@ -76,7 +69,6 @@ panel-vnx-rm692h5-cmd.ko
 panel-boe-rm692h5-cmd.ko
 panel-boe-raydium-rm692h5-cmd.ko
 mediatek-drm.ko
-aee_rs.ko
 mmprofile.ko
 mtk-uart-apdma.ko
 uarthub_drv.ko
@@ -108,8 +100,6 @@ rpmb.ko
 rpmb-mtk.ko
 ufs-mediatek-mod.ko
 ufs-mediatek-dbg.ko
-blocktag.ko
-pidmap.ko
 mtk-pmic-keys.ko
 mtk-kpd.ko
 regulator-vibrator.ko
