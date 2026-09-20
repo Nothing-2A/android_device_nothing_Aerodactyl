@@ -328,9 +328,9 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Security
-BOOT_SECURITY_PATCH := 2025-10-05
+BOOT_SECURITY_PATCH := 2026-04-05
 INIT_BOOT_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
-VENDOR_SECURITY_PATCH := 2026-03-05
+VENDOR_SECURITY_PATCH := 2026-08-01
 
 # Sensors
 $(call soong_config_set,nothing_sensors,tp_udfps_path,/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_fod_pressed)
