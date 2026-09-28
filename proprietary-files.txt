@@ -243,9 +243,8 @@ vendor/lib64/libbt-vendor.so
 vendor/firmware/BT_FW.cfg
 
 # Bluetooth - A2DP
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+vendor/lib64/libbluetooth_audio_session_aidl_mediatek.so
+vendor/lib64/vendor.mediatek.hardware.bluetooth.audio-impl.so
 
 # Camera
 vendor/bin/hw/mt6886/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
