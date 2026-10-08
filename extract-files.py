@@ -209,8 +209,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libsfplugin_ccodec_utils-v33.so': blob_fixup()
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v33.so')
         .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
-    'vendor/bin/hw/mtkfusionrild': blob_fixup()
-        .add_needed('libutils-v33.so'),
     (
         'vendor/lib64/libnvram.so',
         'vendor/lib64/libtflite_mtk.so'
