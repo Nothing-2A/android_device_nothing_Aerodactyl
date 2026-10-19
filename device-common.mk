@@ -411,6 +411,9 @@ PRODUCT_PACKAGES += \
     wlan_assistant
 
 PRODUCT_PACKAGES += \
+    wpa_supplicant.conf
+
+PRODUCT_PACKAGES += \
     libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
