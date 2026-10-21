@@ -63,6 +63,14 @@ vendor.debug.morpho.zoomeis.enable=true
 # Crypto
 ro.crypto.volume.options=aes-256-xts:aes-256-hctr2
 
+# Dalvik
+dalvik.vm.heapstartsize=24m
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=512m
+dalvik.vm.heaptargetutilization=0.46
+dalvik.vm.heapminfree=8m
+dalvik.vm.heapmaxfree=48m
+
 # Display
 debug.graphics.game_default_frame_rate.disabled=true
 debug.mediatek.disp_decompress=1
