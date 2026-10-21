@@ -43,32 +43,48 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # API
-BOARD_SHIPPING_API_LEVEL := 33
+BOARD_SHIPPING_API_LEVEL := 202504
 PRODUCT_SHIPPING_API_LEVEL := 34
 
 # Audio
-$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
-
 PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio.service.mediatek \
-    android.hardware.bluetooth.audio-impl-mediatek-aidl \
-    android.hardware.soundtrigger@2.3-impl
-
-PRODUCT_PACKAGES += \
+    audio_policy.stub \
     audio.primary.default \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
+    libaecsw \
+    libagc1sw \
+    libagc2sw \
+    libbassboostsw \
+    libbundleaidl \
+    libdownmixaidl \
+    libdynamicsprocessingaidl \
+    libenvreverbsw \
+    libequalizersw \
+    liberasersw \
+    libhapticgeneratoraidl \
+    libloudnessenhanceraidl \
+    libnssw \
+    libpreprocessingaidl \
+    libpresetreverbsw \
+    libreverbaidl \
+    libspatializersw \
+    libvirtualizersw \
+    libvisualizeraidl \
+    libvolumesw \
+    libextensioneffect
+
+PRODUCT_PACKAGES += \
     MtkInCallService \
     NothingDirac
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration_a2dp_offload_enable_cg_enable.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_config.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(LOCAL_PATH)/configs/audio/bluetooth_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_offload_audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml \
     $(LOCAL_PATH)/configs/audio/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml
 
@@ -155,11 +171,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
-
 # Glyph
 PRODUCT_PACKAGES += \
     GlyphAdapter \
@@ -183,10 +194,6 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # Init
-PRODUCT_PACKAGES += \
-    init.ethtooloffloading.rc \
-    init.ethtooloffloading.sh
-
 PRODUCT_PACKAGES += \
     chipinfo \
     fstab.enableswap \
@@ -212,7 +219,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore_V2.xml
+    android.hardware.hardware_keystore_V3.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml \
@@ -248,7 +255,6 @@ PRODUCT_PACKAGES += \
     NothingFelicaDisabler
 
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
@@ -258,6 +264,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.nxp.mifare.xml
 
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JPN/android.hardware.nfc.ese.xml \
     frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_JPN/android.hardware.se.omapi.ese.xml
 
 # NTF
@@ -297,7 +304,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub
+    vendor.mediatek.hardware.mtkpower-service.stub
 
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
@@ -314,7 +321,6 @@ include hardware/mediatek/configs/properties/vendor_logtag.mk
 # Radio
 ENABLE_VENDOR_RIL_SERVICE := true
 
-$(call inherit-product, hardware/lineage/compat/frameworks/compat.mk)
 $(call inherit-product, hardware/mediatek/frameworks/mediatek-frameworks.mk)
 
 PRODUCT_PACKAGES += \
@@ -333,9 +339,9 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Security
-BOOT_SECURITY_PATCH := 2026-04-05
+BOOT_SECURITY_PATCH := 2026-09-05
 INIT_BOOT_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
-VENDOR_SECURITY_PATCH := 2026-03-05
+VENDOR_SECURITY_PATCH := 2026-07-05
 
 # Sensors
 $(call soong_config_set,nothing_sensors,tp_udfps_path,/sys/devices/platform/soc/11013000.spi3/spi_master/spi3/spi3.0/fts_gesture_fod_pressed)
@@ -402,8 +408,6 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Wifi
-$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
-
 PRODUCT_PACKAGES += \
     wpa_supplicant \
     hostapd \

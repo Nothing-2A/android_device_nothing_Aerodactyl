@@ -8,14 +8,6 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.noth.hardware.camera</name>
-        <version>1</version>
-        <interface>
-            <name>INtCamService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.noth.hardware.sensor.sensor_extension</name>
         <version>1</version>
         <interface>

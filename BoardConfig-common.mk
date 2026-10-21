@@ -6,7 +6,7 @@
 BUILD_BROKEN_DUP_RULES := true
 
 DEVICE_PATH := device/nothing/Aerodactyl
-KERNEL_PATH := $(DEVICE_PATH)-kernel
+KERNEL_PATH := $(DEVICE_PATH)-kernel-prebuilt
 
 # Architecture
 TARGET_ARCH := arm64
@@ -26,7 +26,7 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/aids/config.fs
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml \
+    hardware/mediatek/vintf/mediatek_framework_compatibility_matrix_aidl.xml \
     $(DEVICE_PATH)/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
@@ -44,13 +44,18 @@ BOARD_TAGS_OFFSET := 0x07c88000
 BOARD_RAMDISK_OFFSET := 0x26f08000
 BOARD_RAMDISK_USE_LZ4 := true
 
-BOARD_KERNEL_CMDLINE += androidboot.console=0
 BOARD_KERNEL_CMDLINE += bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += cgroup_disable=memory
 BOARD_KERNEL_CMDLINE += initcall_debug=0 loglevel=0 log_buf_len=1024K
 BOARD_KERNEL_CMDLINE += kasan=off
-BOARD_KERNEL_CMDLINE += rcu_nocbs=all rcutree.enable_rcu_lazy
 BOARD_KERNEL_CMDLINE += sysctl.kernel.sched_pelt_multiplier=4
+
+BOARD_BOOTCONFIG += androidboot.console=0
+BOARD_BOOTCONFIG += kernel.rcu_nocbs=all
+BOARD_BOOTCONFIG += kernel.rcutree.enable_rcu_lazy=1
+BOARD_BOOTCONFIG += kernel.rcupdate.rcu_cpu_stall_cputime=1
+
+BOARD_BOOTCONFIG += androidboot.selinux=permissive
 
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 
@@ -82,17 +87,6 @@ BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(BOARD_KERNEL_MODULE_DIR)/,$(BOARD_V
 
 ALL_VENDOR_RAMDISK_MODULES := $(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(BOARD_KERNEL_MODULE_DIR)/,$(ALL_VENDOR_RAMDISK_MODULES))
-
-BOARD_VENDOR_KERNEL_MODULES += \
-    $(BOARD_KERNEL_MODULE_DIR)/bt_drv_6886.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/connfem.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/conninfra.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/fmradio_drv_connac2x.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/gps_drv_dl_v051.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/gps_pwr.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/gps_scp.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/wlan_drv_gen4m_6886.ko \
-    $(BOARD_KERNEL_MODULE_DIR)/wmt_chrdev_wifi_connac2.ko
 
 # Partitions
 AB_OTA_PARTITIONS += \
@@ -174,9 +168,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-ifneq ($(filter PacmanPro, $(PRODUCT_DEVICE)),)
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
-endif
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 
 BOARD_AVB_ALGORITHM := SHA256_RSA2048

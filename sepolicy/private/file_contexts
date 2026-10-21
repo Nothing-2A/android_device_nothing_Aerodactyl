@@ -1,2 +1,0 @@
-# USB (Ethernet)
-/system_ext/bin/init.ethtooloffloading.sh    u:object_r:ethtooloffloading_exec:s0

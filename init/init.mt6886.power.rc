@@ -227,17 +227,18 @@ on property:ro.boot.ddr_size=12288
     setprop dalvik.vm.heapminfree 8m
     setprop dalvik.vm.heapmaxfree 56m
 
-service vendor.gralloc-4-0 /vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+service vendor.gralloc-v2 /vendor/bin/hw/android.hardware.graphics.allocator-V2-service-mediatek
     class hal animation
-    interface android.hardware.graphics.allocator@4.0::IAllocator default
     user system
     group graphics drmrpc
     capabilities SYS_NICE
     onrestart restart surfaceflinger
+    onrestart restart vendor.hwcomposer
+    onrestart restart camerahalserve
     task_profiles ProcessCapacityHigh HighPerformance
     override
 
-service vendor.hwcomposer-3-1 /vendor/bin/hw/android.hardware.graphics.composer@3.1-service
+service vendor.hwcomposer /vendor/bin/hw/android.hardware.graphics.composer@3.4-service
     class hal animation
     user system
     group graphics drmrpc

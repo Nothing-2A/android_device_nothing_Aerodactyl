@@ -67,6 +67,10 @@
     <scenario encode="OneChanMono_48_6" decode="invalid"/>
     <scenario encode="TwoChanStereo_48_6" decode="invalid"/>
     <scenario encode="TwoChanTwoDevStereo_48_6" decode="invalid"/>
+    <scenario encode="APEX_ADAPTIVE_LE_TwoChanStereo_48" decode="invalid"/>
+    <scenario encode="APEX_ADAPTIVE_LE_TwoChanStereo_96" decode="invalid"/>
+    <scenario encode="APEX_ADAPTIVE_LEX_TwoChanStereo_48" decode="invalid"/>
+    <scenario encode="APEX_ADAPTIVE_LEX_TwoChanStereo_96" decode="invalid"/>
     <!-- decode only -->
     <scenario encode="invalid" decode="OneChanMono_8_1" />
     <scenario encode="invalid" decode="TwoChanTwoDevStereo_8_1" />
@@ -287,8 +291,7 @@
     <configuration name="TwoChanStereo_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="STEREO_TWO_CISES_PER_DEVICE"/>
     <configuration name="OneChanStereo_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="STEREO_ONE_CIS_PER_DEVICE"/>
     <configuration name="TwoChanTwoDevStereo_48_6" codecConfiguration="LC3_48k_6" strategyConfiguration="STEREO_TWO_CISES_TWO_DEVICES"/>
-
-    <!-- brodcast -->
+  <!-- brodcast -->
     <configuration name="BcastStereo_8_1" codecConfiguration="LC3_8k_1" strategyConfiguration="BROADCAST_STEREO"/>
     <configuration name="BcastStereo_8_2" codecConfiguration="LC3_8k_2" strategyConfiguration="BROADCAST_STEREO"/>
     <configuration name="BcastStereo_16_1" codecConfiguration="LC3_16k_1" strategyConfiguration="BROADCAST_STEREO"/>

@@ -49,6 +49,7 @@
                 <item>Earpiece</item>
                 <item>Built-In Mic</item>
                 <item>Built-In Back Mic</item>
+                <item>FM Tuner Out</item>
                 <item>FM Tuner In</item>
                 <item>Voice Call In</item>
                 <item>Echo Ref In</item>
@@ -74,7 +75,7 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100 48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
-                <mixPort name="compress_offload" role="source" flags="AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD AUDIO_OUTPUT_FLAG_NON_BLOCKING AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_GAPLESS_OFFLOAD">
+                <mixPort name="compress_offload" role="source" flags="AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD AUDIO_OUTPUT_FLAG_NON_BLOCKING AUDIO_OUTPUT_FLAG_DIRECT">
                     <profile name="" format="AUDIO_FORMAT_MP3"
                              samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"
                              channelMasks="AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_MONO"/>
@@ -102,8 +103,10 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100 48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
+                <!--  heaton.zhong, 2026/07/20,Remove for HDMI,because 23111 not support HDMI
                 <mixPort name="hdmi_mix_output" role="source">
                 </mixPort>
+                end by heaton.zhong, 2026/07/20 -->
                 <mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCount="1">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 16000 32000 44100 48000"
@@ -143,7 +146,7 @@
                 <mixPort name="hifi_input" role="sink"/>
             </mixPorts>
             <devicePorts>
-                <!-- Output devices declaration  i.e. Sink DEVICE PORT -->
+                <!-- Output devices declaration, i.e. Sink DEVICE PORT -->
                 <devicePort tagName="Earpiece" type="AUDIO_DEVICE_OUT_EARPIECE" role="sink">
                    <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
                              samplingRates="44100 48000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
@@ -168,6 +171,7 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="44100 48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
+                <!--  heaton.zhong, 2026/07/20,Remove for HDMI,because 23111 not support HDMI
                 <devicePort tagName="HDMI" type="AUDIO_DEVICE_OUT_AUX_DIGITAL" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_32_BIT"
                              samplingRates="8000 11025 16000 22050 32000 44100 48000 64000 88200 96000 128000 176400 192000"
@@ -176,6 +180,7 @@
                              samplingRates="8000 11025 16000 22050 32000 44100 48000 64000 88200 96000 128000 176400 192000"
                              channelMasks="AUDIO_CHANNEL_OUT_7POINT1"/>
                 </devicePort>
+                end by heaton.zhong, 2026/07/20 -->
                 <devicePort tagName="BT SCO" type="AUDIO_DEVICE_OUT_BLUETOOTH_SCO" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 16000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
@@ -305,8 +310,10 @@
                        sources="primary output,compress_offload"/>
                 <route type="mix" sink="FM Tuner Out"
                        sources="primary output"/>
+                <!--  heaton.zhong, 2026/07/20,Remove for HDMI,because 23111 not support HDMI
                 <route type="mix" sink="HDMI"
                        sources="hdmi_mix_output"/>
+                end by heaton.zhong, 2026/07/20 -->
                 <route type="mix" sink="BT A2DP Out"
                        sources="primary output,deep_buffer,fast,compress_offload"/>
                 <route type="mix" sink="BT A2DP Headphones"
@@ -336,7 +343,7 @@
         </module>
 
         <!-- BT Audio HAL -->
-        <xi:include href="bluetooth_a2dp_offload_ums_offload_audio_policy_configuration.xml"/>
+        <xi:include href="bluetooth_offload_audio_policy_configuration.xml"/>
 
         <!-- Usb Audio HAL -->
         <xi:include href="usb_audio_accessory_only_policy_configuration.xml"/>

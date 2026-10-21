@@ -1,5 +1,5 @@
 # All proprietary files from this list, unless pinned and noted otherwise,
-# are from Nothing Phone (2a) Plus (PacmanPro-B4.0-260813-0941).
+# are from Nothing Phone (2a) Plus (PacmanPro-C5.0-261015-1824).
 
 apusys.img;AB
 audio_dsp.img;AB
@@ -11,12 +11,13 @@ dpm.img;AB
 gpueb.img;AB
 gz.img;AB
 logo.img;AB
+lk.img;AB
 mcf_ota.img;AB
 mcupm.img;AB
 md1img.img;AB
 mvpu_algo.img;AB
 pi_img.img;AB
-preloader_raw.img;AB|06bc5208b087c85e68b328e3485149af53ccf1c3
+preloader_raw.img;AB
 scp.img;AB
 spmfw.img;AB
 sspm.img;AB
