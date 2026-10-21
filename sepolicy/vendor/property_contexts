@@ -2,6 +2,7 @@
 persist.vendor.newdirac.    u:object_r:vendor_audio_prop:s0
 
 # Face unlock
+persist.vendor.face.              u:object_r:vendor_face_prop:s0
 persist.vendor.debug.face_aidl    u:object_r:vendor_face_prop:s0
 
 # Fingerprint
