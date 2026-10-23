@@ -4,11 +4,31 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <!-- Whether to enable MediaTek-specific optical dimming for UDFPS -->
-    <bool name="config_udfpsMtkGhbmDimming">true</bool>
+    <!-- Whether to enable framework dimming for UDFPS -->
+    <bool name="config_udfpsFrameworkDimming">true</bool>
 
-    <!-- Name of the UDFPS HBM DimLayer for the HWComposer -->
-    <string name="config_udfpsHbmDimLayer" translatable="false">NTFingerprintDimLayer</string>
+    <!-- Brightness-to-alpha lookup table (LUT) for UDFPS framework dimming.
+         Each entry is in the format <brightness>,<alpha> where:
+           - brightness = panel backlight level
+           - alpha = dim layer transparency applied at that brightness
+         Rules:
+           • The entries should be strictly ascending by brightness.
+           • First entry = <minBrightness,maxAlpha>.
+           • Last entry  = <maxBrightness,minAlpha>.
+    -->
+    <string-array name="config_udfpsDimmingBrightnessAlphaArray">
+        <item>0,227</item>
+        <item>20,227</item>
+        <item>255,0</item>
+    </string-array>
+
+    <string name="config_udfpsDimLayerName" translatable="false">NTFingerprintDimLayer</string>
+
+    <!-- Only show the dim layer between finger down and finger up (MTK GHBM) -->
+    <bool name="config_udfpsDimOnFingerDownOnly">true</bool>
+
+    <!-- Add a second fully transparent layer next to the dim layer (MTK HWC expects it) -->
+    <bool name="config_udfpsDimExtraLayer">true</bool>
 
     <!-- Doze: does the long press sensor need a proximity check? -->
     <bool name="doze_long_press_proximity_check">true</bool>
