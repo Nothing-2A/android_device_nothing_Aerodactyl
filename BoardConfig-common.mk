@@ -55,8 +55,6 @@ BOARD_BOOTCONFIG += kernel.rcu_nocbs=all
 BOARD_BOOTCONFIG += kernel.rcutree.enable_rcu_lazy=1
 BOARD_BOOTCONFIG += kernel.rcupdate.rcu_cpu_stall_cputime=1
 
-BOARD_BOOTCONFIG += androidboot.selinux=permissive
-
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 
 BOARD_MKBOOTIMG_ARGS += \
