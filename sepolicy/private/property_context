@@ -1,2 +1,5 @@
 # Audio
 persist.sys.dirac.    u:object_r:dirac_prop:s0
+
+# Face unlock
+system.face.    u:object_r:system_face_config_prop:s0

@@ -1,0 +1,2 @@
+# Face unlock
+system_restricted_prop(system_face_config_prop)
