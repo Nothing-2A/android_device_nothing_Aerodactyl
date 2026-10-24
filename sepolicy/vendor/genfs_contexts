@@ -12,8 +12,9 @@ genfscon sysfs /panel_feature                                                   
 genfscon sysfs /devices/platform/soc/11e80000.i2c/i2c-3/3-003a/leds/aw20036_led    u:object_r:vendor_sysfs_glyph:s0
 
 # Memory
-genfscon proc /sys/vm/lowmem_reserve_ratio    u:object_r:proc_watermark_boost_factor:s0
-genfscon proc /sys/vm/min_free_kbytes         u:object_r:proc_watermark_boost_factor:s0
+genfscon proc /sys/vm/compaction_proactiveness    u:object_r:proc_compaction_proactiveness:s0
+genfscon proc /sys/vm/lowmem_reserve_ratio        u:object_r:proc_watermark_boost_factor:s0
+genfscon proc /sys/vm/min_free_kbytes             u:object_r:proc_watermark_boost_factor:s0
 
 # Thermal
 genfscon sysfs /devices/virtual/virtual_temp/shell/data    u:object_r:vendor_sysfs_virtual_temp:s0
