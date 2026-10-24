@@ -180,6 +180,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
+# Graphics
+$(call inherit-product, $(SRC_TARGET_DIR)/product/angle_default.mk)
+
+PRODUCT_PACKAGES += \
+    ANGLE
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/graphics/feature_config_vk.binarypb:$(TARGET_COPY_OUT_SYSTEM)/etc/angle/feature_config_vk.binarypb
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
