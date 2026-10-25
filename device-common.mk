@@ -124,6 +124,10 @@ PRODUCT_COPY_FILES += \
 # Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Connectivity
+PRODUCT_PACKAGES += \
+    conninfra_loader
+
 # Display
 $(call soong_config_set_bool,surfaceflinger,register_displayservice,true)
 
@@ -208,7 +212,6 @@ PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6886 \
     fstab.mt6886.vendor_ramdisk \
-    init_conninfra.rc \
     init.connectivity.common.rc \
     init.mt6886.rc \
     init.mt6886.power.rc \
