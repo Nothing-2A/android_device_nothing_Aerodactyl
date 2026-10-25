@@ -311,6 +311,8 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery
 
 # Power
+$(call soong_config_set_bool,libmtkperf_client,powerhalwrap_aidl,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     vendor.mediatek.hardware.mtkpower-service.stub
