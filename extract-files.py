@@ -58,6 +58,10 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('start', 'enable'),
     'system_ext/lib64/libimsma.so': blob_fixup()
         .replace_needed('libsink.so', 'libsink-mtk.so'),
+    'system_ext/framework/mediatek-ims-extension-plugin.jar': blob_fixup()
+        .apktool_patch('blob-patches/mediatek-ims-extension-plugin'),
+    'system_ext/framework/mediatek-telephony-base.jar': blob_fixup()
+        .apktool_patch('blob-patches/mediatek-telephony-base'),
     'system_ext/priv-app/ImsService/ImsService.apk': blob_fixup()
         .apktool_patch('blob-patches/ImsService'),
     'system_ext/priv-app/LPPeService/LPPeService.apk': blob_fixup()

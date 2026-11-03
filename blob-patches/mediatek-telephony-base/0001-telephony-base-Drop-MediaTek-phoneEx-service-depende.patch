@@ -1,0 +1,35 @@
+From 7d6b089c7f108b1e2da1233a1aa46568526a0be1 Mon Sep 17 00:00:00 2001
+From: Mashopy <eliasgheeraert@gmail.com>
+Date: Tue, 3 Nov 2026 21:10:25 +0100
+Subject: [PATCH] telephony-base: Drop MediaTek phoneEx service dependency
+
+It's already no-op in AOSP.
+---
+ .../mediatek/telephony/MtkTelephonyManagerEx.smali    | 11 +----------
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+
+diff --git a/smali/com/mediatek/telephony/MtkTelephonyManagerEx.smali b/smali/com/mediatek/telephony/MtkTelephonyManagerEx.smali
+index 376dfd5..5fda425 100644
+--- a/smali/com/mediatek/telephony/MtkTelephonyManagerEx.smali
++++ b/smali/com/mediatek/telephony/MtkTelephonyManagerEx.smali
+@@ -353,16 +353,7 @@
+ .method private blacklist getIMtkTelephonyEx()Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+     .locals 1
+ 
+-    .line 317
+-    const-string v0, "phoneEx"
+-
+-    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+-
+-    move-result-object v0
+-
+-    invoke-static {v0}, Lcom/mediatek/internal/telephony/IMtkTelephonyEx$Stub;->asInterface(Landroid/os/IBinder;)Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+-
+-    move-result-object v0
++    const/4 v0, 0x0
+ 
+     return-object v0
+ .end method
+-- 
+2.56.0
+

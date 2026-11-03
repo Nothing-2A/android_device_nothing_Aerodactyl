@@ -1,0 +1,338 @@
+From 8b13ac1f427d23fe3f05f309241f6da786136370 Mon Sep 17 00:00:00 2001
+From: Mashopy <eliasgheeraert@gmail.com>
+Date: Tue, 3 Nov 2026 21:03:38 +0100
+Subject: [PATCH] ims-plugin: Drop MediaTek phoneEx service dependency
+
+It's already no-op in AOSP, and we don't want custom carrier activation logic.
+---
+ .../imsplugin/ImsCallPluginImpl.smali         |  69 +-----
+ .../imsplugin/ImsSelfActivatorImpl.smali      | 223 +-----------------
+ 2 files changed, 7 insertions(+), 285 deletions(-)
+
+diff --git a/smali/com/mediatek/imsplugin/ImsCallPluginImpl.smali b/smali/com/mediatek/imsplugin/ImsCallPluginImpl.smali
+index 0433ae4..98a0507 100644
+--- a/smali/com/mediatek/imsplugin/ImsCallPluginImpl.smali
++++ b/smali/com/mediatek/imsplugin/ImsCallPluginImpl.smali
+@@ -104,74 +104,11 @@
+ .end method
+ 
+ .method public isCapabilitySwitching()Z
+-    .locals 5
+-
+-    .line 119
+-    nop
+-
+-    .line 120
+-    const-string v0, "phoneEx"
+-
+-    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+-
+-    move-result-object v0
+-
+-    .line 119
+-    invoke-static {v0}, Lcom/mediatek/internal/telephony/IMtkTelephonyEx$Stub;->asInterface(Landroid/os/IBinder;)Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+-
+-    move-result-object v0
+-
+-    .line 122
+-    .local v0, "iTelEx":Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+-    const/4 v1, 0x0
+-
+-    if-eqz v0, :cond_0
+-
+-    .line 125
+-    :try_start_0
+-    invoke-interface {v0}, Lcom/mediatek/internal/telephony/IMtkTelephonyEx;->isCapabilitySwitching()Z
+-
+-    move-result v1
+-    :try_end_0
+-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+-
+-    return v1
+-
+-    .line 126
+-    :catch_0
+-    move-exception v2
+-
+-    .line 127
+-    .local v2, "e":Landroid/os/RemoteException;
+-    new-instance v3, Ljava/lang/StringBuilder;
+-
+-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+-
+-    const-string v4, "Exception:"
+-
+-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+-
+-    move-result-object v3
+-
+-    const-string v4, "ImsCallPluginImpl"
+-
+-    invoke-static {v4, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++    .locals 1
+ 
+-    .line 128
+-    return v1
++    const/4 v0, 0x0
+ 
+-    .line 132
+-    .end local v2    # "e":Landroid/os/RemoteException;
+-    :cond_0
+-    return v1
++    return v0
+ .end method
+ 
+ .method public isImsFwkRequest(I)Z
+diff --git a/smali/com/mediatek/imsplugin/ImsSelfActivatorImpl.smali b/smali/com/mediatek/imsplugin/ImsSelfActivatorImpl.smali
+index c9f70b0..b653b1a 100644
+--- a/smali/com/mediatek/imsplugin/ImsSelfActivatorImpl.smali
++++ b/smali/com/mediatek/imsplugin/ImsSelfActivatorImpl.smali
+@@ -220,103 +220,8 @@
+ .end method
+ 
+ .method private notifySelfActivationSMBeforeDial(Z)V
+-    .locals 7
+-    .param p1, "isEcc"    # Z
+-
+-    .line 182
+-    nop
+-
+-    .line 183
+-    const-string v0, "phoneEx"
+-
+-    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+-
+-    move-result-object v0
+-
+-    .line 182
+-    invoke-static {v0}, Lcom/mediatek/internal/telephony/IMtkTelephonyEx$Stub;->asInterface(Landroid/os/IBinder;)Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+-
+-    move-result-object v0
+-
+-    .line 184
+-    .local v0, "iTelEx":Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+-    const-string v1, "ImsExtSelfActivatorImpl"
+-
+-    if-nez v0, :cond_0
+-
+-    .line 185
+-    const-string v2, "Can not access ITelephonyEx"
+-
+-    invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+-
+-    .line 186
+-    return-void
+-
+-    .line 189
+-    :cond_0
+-    new-instance v2, Landroid/os/Bundle;
+-
+-    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
+-
+-    .line 190
+-    .local v2, "extra":Landroid/os/Bundle;
+-    move v3, p1
+-
+-    .line 191
+-    .local v3, "callType":I
+-    const-string v4, "key_mo_call_type"
+-
+-    invoke-virtual {v2, v4, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+-
+-    .line 192
+-    const-string v4, "notifySelfActivationSMBeforeDial"
+-
+-    invoke-static {v1, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+-
+-    .line 195
+-    :try_start_0
+-    iget-object v4, p0, Lcom/mediatek/imsplugin/ImsSelfActivatorImpl;->mContext:Landroid/content/Context;
+-
+-    invoke-static {v4}, Lcom/mediatek/ims/ImsService;->getInstance(Landroid/content/Context;)Lcom/mediatek/ims/ImsService;
+-
+-    move-result-object v4
+-
+-    .line 196
+-    .local v4, "imsService":Lcom/mediatek/ims/ImsService;
+-    iget v5, p0, Lcom/mediatek/imsplugin/ImsSelfActivatorImpl;->mPhoneId:I
+-
+-    invoke-static {v5}, Lcom/mediatek/internal/telephony/MtkSubscriptionManager;->getSubIdUsingPhoneId(I)I
+-
+-    move-result v5
+-
+-    .line 197
+-    .local v5, "subId":I
+-    const/4 v6, 0x1
+-
+-    invoke-interface {v0, v6, v2, v5}, Lcom/mediatek/internal/telephony/IMtkTelephonyEx;->selfActivationAction(ILandroid/os/Bundle;I)I
+-    :try_end_0
+-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+-
+-    .line 200
+-    nop
+-
+-    .end local v4    # "imsService":Lcom/mediatek/ims/ImsService;
+-    .end local v5    # "subId":I
+-    goto :goto_0
+-
+-    .line 198
+-    :catch_0
+-    move-exception v4
+-
+-    .line 199
+-    .local v4, "ex":Landroid/os/RemoteException;
+-    const-string v5, "RemoteException doSelfActivationDial()"
+-
+-    invoke-static {v1, v5}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
++    .locals 0
+ 
+-    .line 201
+-    .end local v4    # "ex":Landroid/os/RemoteException;
+-    :goto_0
+     return-void
+ .end method
+ 
+@@ -540,129 +445,9 @@
+ .end method
+ 
+ .method public shouldProcessSelfActivation(I)Z
+-    .locals 6
+-    .param p1, "phoneId"    # I
+-
+-    .line 214
+-    iget-object v0, p0, Lcom/mediatek/imsplugin/ImsSelfActivatorImpl;->mImsService:Lcom/mediatek/ims/ImsService;
+-
+-    invoke-virtual {v0, p1}, Lcom/mediatek/ims/ImsService;->getImsServiceState(I)I
+-
+-    move-result v0
+-
+-    const/4 v1, 0x0
++    .locals 1
+ 
+-    const-string v2, "ImsExtSelfActivatorImpl"
+-
+-    if-nez v0, :cond_0
+-
+-    .line 215
+-    const-string v0, "shouldProcessSelfActivation() IMS is IN_SERVICE, return false"
+-
+-    invoke-static {v2, v0}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+-
+-    .line 216
+-    return v1
+-
+-    .line 219
+-    :cond_0
+-    nop
+-
+-    .line 220
+-    const-string v0, "phoneEx"
+-
+-    invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
+-
+-    move-result-object v0
+-
+-    .line 219
+-    invoke-static {v0}, Lcom/mediatek/internal/telephony/IMtkTelephonyEx$Stub;->asInterface(Landroid/os/IBinder;)Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+-
+-    move-result-object v0
+-
+-    .line 221
+-    .local v0, "iTelEx":Lcom/mediatek/internal/telephony/IMtkTelephonyEx;
+-    if-nez v0, :cond_1
+-
+-    .line 222
+-    const-string v3, "Can not access ITelephonyEx"
+-
+-    invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+-
+-    .line 223
+-    return v1
+-
+-    .line 228
+-    :cond_1
+-    :try_start_0
+-    iget-object v3, p0, Lcom/mediatek/imsplugin/ImsSelfActivatorImpl;->mContext:Landroid/content/Context;
+-
+-    invoke-static {v3}, Lcom/mediatek/ims/ImsService;->getInstance(Landroid/content/Context;)Lcom/mediatek/ims/ImsService;
+-
+-    move-result-object v3
+-
+-    .line 229
+-    .local v3, "imsService":Lcom/mediatek/ims/ImsService;
+-    invoke-static {p1}, Lcom/mediatek/internal/telephony/MtkSubscriptionManager;->getSubIdUsingPhoneId(I)I
+-
+-    move-result v4
+-
+-    .line 230
+-    .local v4, "subId":I
+-    invoke-interface {v0, v4}, Lcom/mediatek/internal/telephony/IMtkTelephonyEx;->getSelfActivateState(I)I
+-
+-    move-result v5
+-    :try_end_0
+-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+-
+-    .line 234
+-    .end local v3    # "imsService":Lcom/mediatek/ims/ImsService;
+-    .end local v4    # "subId":I
+-    .local v5, "selfActivateState":I
+-    nop
+-
+-    .line 235
+-    new-instance v3, Ljava/lang/StringBuilder;
+-
+-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+-
+-    const-string v4, "Self Activate State: "
+-
+-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+-
+-    move-result-object v3
+-
+-    invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
+-
+-    .line 236
+-    const/4 v2, 0x2
+-
+-    if-ne v5, v2, :cond_2
+-
+-    const/4 v1, 0x1
+-
+-    :cond_2
+-    return v1
+-
+-    .line 231
+-    .end local v5    # "selfActivateState":I
+-    :catch_0
+-    move-exception v3
+-
+-    .line 232
+-    .local v3, "ex":Landroid/os/RemoteException;
+-    const-string v4, "RemoteException shouldProcessSelfActivation()"
+-
+-    invoke-static {v2, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
++    const/4 v0, 0x0
+ 
+-    .line 233
+-    return v1
++    return v0
+ .end method
+-- 
+2.56.0
+
