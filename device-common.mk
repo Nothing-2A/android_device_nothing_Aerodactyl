@@ -391,6 +391,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
     hardware/mediatek/libion_mtk \
     hardware/mediatek/libmtkperf_client \
+    hardware/mediatek/wlan/wifi_hal \
     hardware/nothing
 
 # Thermal
@@ -432,9 +433,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     wpa_supplicant.conf
-
-PRODUCT_PACKAGES += \
-    libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \

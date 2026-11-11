@@ -28,6 +28,7 @@ vendor.rild.libpath=mtk-ril.so
 media.stagefright.thumbnail.prefer_hw_codecs=true
 
 # Wifi
+wifi.aware.interface=aware_data0
 wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
