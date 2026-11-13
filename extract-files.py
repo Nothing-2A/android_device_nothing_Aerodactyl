@@ -69,7 +69,6 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/bin/hw/mt6886/android.hardware.graphics.allocator-V2-service-mediatek.mt6886',
         'vendor/lib64/hw/mt6886/android.hardware.graphics.allocator-V2-mediatek.so',
-        'vendor/lib64/hw/mt6886/mapper.mediatek.so',
         'vendor/lib64/libcodec2_fsr.so',
         'vendor/lib64/libcodec2_vpp_AIMEMC_plugin.so',
         'vendor/lib64/libcodec2_vpp_AISR_plugin.so',
@@ -92,6 +91,9 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('# STNFC_FW_BIN_NAME', 'STNFC_FW_BIN_NAME')
         .regex_replace('# STNFC_FW_CONF_NAME', 'STNFC_FW_CONF_NAME')
         .regex_replace('STNFC_FW_DEBUG_ENABLED=1', 'STNFC_FW_DEBUG_ENABLED=0'),
+    'vendor/lib64/hw/mt6886/mapper.mediatek.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.common-V6-ndk.so', 'android.hardware.graphics.common-V7-ndk.so')
+        .sig_replace('e1 03 1f aa e3 03 16 2a ed 74 00 94 df 1a 00 71', 'e1 03 1f aa e3 03 16 2a 1f 20 03 d5 df 1a 00 71'),
     'vendor/lib64/hw/mt6886/vendor.mediatek.hardware.pq_aidl-impl.so': blob_fixup()
         .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
