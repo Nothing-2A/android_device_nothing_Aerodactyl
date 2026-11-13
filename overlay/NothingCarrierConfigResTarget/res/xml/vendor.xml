@@ -46,10 +46,17 @@
         <boolean name="ignore_rtt_mode_setting_bool" value="true" />
         <boolean name="rtt_upgrade_supported_bool" value="true" />
         <boolean name="show_ims_registration_status_bool" value="true" />
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
+    </carrier_config>
+    <carrier_config cid="681">
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
     </carrier_config>
     <carrier_config cid="850">
         <boolean name="vilte_data_is_metered_bool" value="false" />
         <int name="call_waiting_service_class_int" value="0" />
+    </carrier_config>
+    <carrier_config cid="1988">
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
     </carrier_config>
     <carrier_config cid="2094" name="tele.ring">
         <string name="carrier_name_string">telering</string>
@@ -1330,6 +1337,9 @@
         <boolean name="additional_call_setting_bool" value="true" />
         <boolean name="carrier_wfc_ims_available_bool" value="false" />
         <boolean name="carrier_vt_available_bool" value="false" />
+    </carrier_config>
+    <carrier_config cid="2581" name="DITO">
+        <boolean name="carrier_wfc_supports_wifi_only_bool" value="true" />
     </carrier_config>
     <carrier_config cid="2429" name="Rakuten Mobile(MNO)">
         <string name="5g_icon_configuration_string">connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G</string>

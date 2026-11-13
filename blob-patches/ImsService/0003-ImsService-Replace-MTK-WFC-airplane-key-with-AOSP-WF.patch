@@ -1,0 +1,35 @@
+From 668e5fc7c13e81ddcb2bf9f238997df80992d05e Mon Sep 17 00:00:00 2001
+From: Mashopy <eliasgheeraert@gmail.com>
+Date: Wed, 11 Nov 2026 18:23:56 +0100
+Subject: [PATCH 3/3] ImsService: Replace MTK WFC airplane key with AOSP WFC
+ wifi only key
+
+---
+ smali/com/mediatek/wfo/impl/WifiPdnHandler.smali | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali b/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
+index 2bcb458..8e26dde 100644
+--- a/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
++++ b/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
+@@ -70,7 +70,7 @@
+ 
+ .field private static final MAX_RETRY_COUNT:I = 0x3
+ 
+-.field private static final MTK_KEY_WOS_SUPPORT_WFC_IN_FLIGHTMODE:Ljava/lang/String; = "mtk_wos_flight_mode_support_bool"
++.field private static final MTK_KEY_WOS_SUPPORT_WFC_IN_FLIGHTMODE:Ljava/lang/String; = "carrier_wfc_supports_wifi_only_bool"
+ 
+ .field private static final NONE_SSID:Ljava/lang/String; = "<unknown ssid>"
+ 
+@@ -764,7 +764,7 @@
+ 
+     move-result v2
+ 
+-    const-string v4, "mtk_wos_flight_mode_support_bool"
++    const-string v4, "carrier_wfc_supports_wifi_only_bool"
+ 
+     if-gt v2, v3, :cond_1
+ 
+-- 
+2.56.0
+

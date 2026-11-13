@@ -1,0 +1,26 @@
+From d7239d3606429472f4e2b1ece6a76824f8af3dd5 Mon Sep 17 00:00:00 2001
+From: Mashopy <eliasgheeraert@gmail.com>
+Date: Wed, 11 Nov 2026 18:15:13 +0100
+Subject: [PATCH 2/3] ImsService: Don't use the deprecated logic to get
+ airplane mode state
+
+---
+ smali/com/mediatek/wfo/impl/WifiPdnHandler.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali b/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
+index c349979..2bcb458 100644
+--- a/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
++++ b/smali/com/mediatek/wfo/impl/WifiPdnHandler.smali
+@@ -2277,7 +2277,7 @@
+ 
+     const-string v2, "airplane_mode_on"
+ 
+-    invoke-static {v0, v2, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
++    invoke-static {v0, v2, v1}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+ 
+     move-result v0
+ 
+-- 
+2.56.0
+
