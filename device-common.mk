@@ -212,7 +212,6 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     chipinfo \
-    fstab.enableswap \
     fstab.mt6886 \
     fstab.mt6886.vendor_ramdisk \
     init.connectivity.common.rc \
