@@ -67,9 +67,7 @@ ro.crypto.volume.options=aes-256-xts:aes-256-hctr2
 dalvik.vm.heapstartsize=24m
 dalvik.vm.heapgrowthlimit=256m
 dalvik.vm.heapsize=512m
-dalvik.vm.heaptargetutilization=0.46
-dalvik.vm.heapminfree=8m
-dalvik.vm.heapmaxfree=48m
+dalvik.vm.enable_time_based_gc_trigger=true
 
 # Display
 debug.graphics.game_default_frame_rate.disabled=true
