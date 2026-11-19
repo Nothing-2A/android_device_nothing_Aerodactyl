@@ -1,5 +1,5 @@
 # All proprietary files from this list, unless pinned and noted otherwise,
-# are from Nothing Phone (2a) (Pacman-C5.0-261015-1824).
+# are from Nothing Phone (2a) (Pacman-C5.0-261112-1938).
 
 # Audio
 system_ext/bin/hw/android.hardware.audio.parameter_parser.service
